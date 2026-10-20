@@ -1,22 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #0b0b0c;
-  --color-graphite: #25282c;
-  --color-steel: #eceef0;
-  --color-silver: #c3c9d0;
-  --color-chrome: #8b929b;
-  --color-signal: #d0141c;
-  --color-signal-dark: #a30f15;
-  --font-display: "Barlow Condensed", "Arial Narrow", sans-serif;
-  --font-sans: "Barlow", system-ui, sans-serif;
+  --color-ink: #0b1b34;
+  --color-graphite: #3b4a63;
+  --color-steel: #f2f6fb;
+  --color-silver: #cfd7e3;
+  --color-chrome: #8493aa;
+  --color-signal: #ff7a1a;
+  --color-signal-dark: #e0630a;
+  --color-azure: #1f6feb;
+  --font-display: "Outfit", system-ui, sans-serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
 }
 
 html { scroll-behavior: smooth; }
 body { font-family: var(--font-sans); background: var(--color-steel); color: var(--color-ink); -webkit-font-smoothing: antialiased; }
-h1, h2, h3, .font-display { font-family: var(--font-display); letter-spacing: 0.005em; }
+h1, h2, h3, .font-display { font-family: var(--font-display); letter-spacing: -0.015em; }
 
-:focus-visible { outline: 3px solid var(--color-signal); outline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--color-azure); outline-offset: 3px; }
 
 /* Slow camera drift on every photo */
 @keyframes drift-a { from { transform: scale(1.04) translate(0, 0); } to { transform: scale(1.16) translate(-2.5%, -1.5%); } }
@@ -26,31 +27,31 @@ h1, h2, h3, .font-display { font-family: var(--font-display); letter-spacing: 0.
 .drift-b { animation: drift-b 18s ease-in-out infinite alternate; }
 .drift-c { animation: drift-c 20s ease-in-out infinite alternate; }
 
-/* Hero convoy: photo columns rolling past in opposite directions */
-@keyframes roll-up { from { transform: translateY(0); } to { transform: translateY(-50%); } }
-@keyframes roll-down { from { transform: translateY(-50%); } to { transform: translateY(0); } }
-.roll-up { animation: roll-up 48s linear infinite; }
-.roll-down { animation: roll-down 56s linear infinite; }
+/* Hero collage: cards bob gently, out of step with each other */
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+.float-a { animation: float 7s ease-in-out infinite; }
+.float-b { animation: float 9s ease-in-out -3s infinite; }
+.float-c { animation: float 8s ease-in-out -5s infinite; }
 
-/* Photo strip */
+/* Endless scrolling strips */
 @keyframes strip { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .strip { animation: strip 60s linear infinite; }
-.strip:hover, .roll-up:hover, .roll-down:hover { animation-play-state: paused; }
+.strip-fast { animation: strip 38s linear infinite; }
+.strip:hover, .strip-fast:hover { animation-play-state: paused; }
 
 /* Hero load sequence */
 @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 .rise { opacity: 0; animation: rise 0.7s cubic-bezier(.2,.7,.2,1) forwards; }
 
 /* Call button heartbeat */
-@keyframes ring { 0% { box-shadow: 0 0 0 0 rgba(208,20,28,.55); } 70% { box-shadow: 0 0 0 16px rgba(208,20,28,0); } 100% { box-shadow: 0 0 0 0 rgba(208,20,28,0); } }
+@keyframes ring { 0% { box-shadow: 0 0 0 0 rgba(255,122,26,.6); } 70% { box-shadow: 0 0 0 16px rgba(255,122,26,0); } 100% { box-shadow: 0 0 0 0 rgba(255,122,26,0); } }
 .ring { animation: ring 2.4s ease-out infinite; }
 
-/* Diagonal cut used between light and dark bands */
-.cut-bottom { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 28px), 0 100%); }
+/* Diagonal cuts between bands */
 .cut-both { clip-path: polygon(0 28px, 100% 0, 100% calc(100% - 28px), 0 100%); }
 
 @media (prefers-reduced-motion: reduce) {
-  .drift-a, .drift-b, .drift-c, .roll-up, .roll-down, .strip, .ring { animation: none; }
+  .drift-a, .drift-b, .drift-c, .float-a, .float-b, .float-c, .strip, .strip-fast, .ring { animation: none; }
   .rise { animation: none; opacity: 1; }
   html { scroll-behavior: auto; }
 }

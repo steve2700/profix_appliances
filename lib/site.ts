@@ -1,13 +1,14 @@
-// TEMPORARY PLACEHOLDERS: swap these when the client confirms the real details.
-// Every phone, WhatsApp and email link on the site reads from this one file.
+// Contact details for Profix. Change them here and the whole site updates.
 export const SITE = {
-  name: "Truck Agents",
-  url: "https://www.truckagents.co.za",
-  phoneDisplay: "067 601 4490",
-  phoneTel: "+27676014490",
-  whatsapp: "27676014490",
-  email: "info@truckagents.co.za",
-  tagline: "Repairs, Services & Maintenance",
+  name: "Profix Electronics & Appliances",
+  shortName: "Profix",
+  url: "https://www.profixappliances.co.za",
+  phoneDisplay: "073 225 1047",
+  phoneTel: "+27732251047",
+  whatsapp: "27732251047",
+  email: "info@profixappliances.co.za",
+  tagline: "Electronics & Appliances",
+  // Used in headlines and schema. Confirm the real service area with the client.
   region: "Gauteng and its outskirts",
 }
 

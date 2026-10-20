@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { notFound } from "next/navigation"
 import { PageHero } from "@/components/page-hero"
 import { MovingImage } from "@/components/moving-image"
@@ -8,8 +9,7 @@ import { Faq } from "@/components/faq"
 import { CtaBand } from "@/components/cta-band"
 import { JsonLd } from "@/components/json-ld"
 import { JobCard } from "@/components/job-card"
-import { BeforeAfter } from "@/components/before-after"
-import Image from "next/image"
+import { BrandStrip } from "@/components/brand-strip"
 import { SERVICES, getService } from "@/lib/services"
 import { AREAS } from "@/lib/areas"
 import { SITE } from "@/lib/site"
@@ -43,14 +43,14 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <JsonLd data={{ "@context": "https://schema.org", "@type": "Service", name: s.name, description: s.metaDescription, url: `${SITE.url}/services/${s.slug}`, serviceType: s.name, provider: { "@id": `${SITE.url}/#business` }, areaServed: { "@type": "AdministrativeArea", name: "Gauteng" } }} />
       <PageHero crumbs={[{ name: "Services", href: "/services" }, { name: s.name, href: `/services/${s.slug}` }]} title={s.headline} text={s.intro}>
         <CallButton />
-        <WhatsAppButton message={`Hi Truck Agents, I need ${s.name.toLowerCase()}.`} />
+        <WhatsAppButton message={`Hi Profix, I need help with: ${s.name.toLowerCase()}.`} />
         <LinkButton href="#job-card" look="outlineLight">Get a Free Quote</LinkButton>
       </PageHero>
 
       <section className="mx-auto grid max-w-7xl gap-12 px-5 py-20 lg:grid-cols-[1fr_0.9fr]">
         <div>
           <p className="rounded-3xl border-l-8 border-signal bg-white p-6 text-xl font-medium leading-relaxed">{s.answer}</p>
-          <h2 className="mt-12 text-4xl font-bold md:text-5xl">What is included</h2>
+          <h2 className="mt-12 text-3xl font-bold md:text-4xl">What is included</h2>
           <ul className="mt-6 grid gap-3 sm:grid-cols-2">
             {s.includes.map((i) => (
               <li key={i} className="flex items-start gap-3 rounded-2xl bg-white p-4 text-lg">
@@ -59,62 +59,58 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </li>
             ))}
           </ul>
-          <h2 className="mt-14 text-4xl font-bold md:text-5xl">When to call us</h2>
+          <h2 className="mt-14 text-3xl font-bold md:text-4xl">When to call us</h2>
           <ul className="mt-6 space-y-3">
             {s.signs.map((i) => (
               <li key={i} className="border-l-4 border-signal pl-4 text-xl">{i}</li>
             ))}
           </ul>
         </div>
-        <MovingImage src={s.image} alt={s.imageAlt} priority className="min-h-[420px] rounded-[2rem] lg:sticky lg:top-32 lg:self-start lg:aspect-[4/5]" sizes="(min-width: 1024px) 40vw, 100vw" markWidth={72} />
+        <MovingImage src={s.image} alt={s.imageAlt} priority className="min-h-[420px] rounded-[2rem] lg:sticky lg:top-32 lg:aspect-[4/5] lg:self-start" sizes="(min-width: 1024px) 40vw, 100vw" markWidth={52} />
       </section>
 
-      {s.gallery && (
-        <section className="bg-white py-20" aria-labelledby="results">
+      {s.process && (
+        <section className="bg-white py-20" aria-labelledby="process">
           <div className="mx-auto max-w-7xl px-5">
-            <h2 id="results" className="text-4xl font-bold md:text-5xl">Before and after</h2>
-            <p className="mt-3 text-lg text-graphite">Drag the slider to compare.</p>
-            <div className={`mt-8 grid gap-8 ${s.gallery.length > 1 ? "md:grid-cols-2" : "max-w-2xl"}`}>
-              {s.gallery.map((g) => <BeforeAfter key={g.title} item={g} />)}
+            <h2 id="process" className="text-3xl font-bold md:text-4xl">See how we work</h2>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {s.process.map((p) => (
+                <figure key={p.src} className="relative overflow-hidden rounded-[2rem]">
+                  <div className="relative aspect-[4/3]"><Image src={p.src} alt={p.alt} fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover" /></div>
+                  <figcaption className="absolute bottom-3 left-3 rounded-full bg-ink/90 px-4 py-1 font-display text-lg text-white">{p.caption}</figcaption>
+                </figure>
+              ))}
             </div>
-            {s.process && (
-              <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {s.process.map((p) => (
-                  <figure key={p.src} className="relative overflow-hidden rounded-[2rem]">
-                    <div className="relative aspect-[4/3]"><Image src={p.src} alt={p.alt} fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover" /></div>
-                    <figcaption className="absolute bottom-3 left-3 rounded-full bg-ink/85 px-4 py-1 font-display text-xl text-white">{p.caption}</figcaption>
-                  </figure>
-                ))}
-              </div>
-            )}
           </div>
         </section>
       )}
 
       <section className="cut-both bg-ink px-5 pb-28 pt-24 text-white">
         <div className="mx-auto max-w-7xl">
-          <h2 className="mb-10 max-w-3xl text-5xl font-bold leading-[0.95] md:text-6xl">Get a quote for {s.name.toLowerCase()}</h2>
-          <JobCard defaultProblem={s.problem} />
+          <h2 className="mb-10 max-w-3xl text-4xl font-bold leading-[1.05] md:text-5xl">Get a quote for {s.name.toLowerCase()}</h2>
+          <JobCard defaultAppliance={s.appliance} />
         </div>
       </section>
 
       <section className="mx-auto max-w-4xl px-5 py-20">
-        <h2 className="mb-10 text-5xl font-bold">Questions about {s.name.toLowerCase()}</h2>
+        <h2 className="mb-10 text-4xl font-bold">Questions about {s.name.toLowerCase()}</h2>
         <Faq items={s.faqs} />
       </section>
 
+      <BrandStrip />
+
       <section className="bg-white py-16">
         <div className="mx-auto max-w-7xl px-5">
-          <h2 className="text-4xl font-bold">We do this across Gauteng</h2>
+          <h2 className="text-3xl font-bold">We do this across Gauteng</h2>
           <div className="mt-6 flex flex-wrap gap-3">
             {AREAS.map((a) => (
-              <Link key={a.slug} href={`/service-areas/${a.slug}`} className="rounded-full border-2 border-ink px-5 py-2 font-display text-xl font-medium transition hover:border-signal hover:bg-signal hover:text-white">{s.name} in {a.name}</Link>
+              <Link key={a.slug} href={`/service-areas/${a.slug}`} className="rounded-full border-2 border-ink px-5 py-2 font-display text-lg font-medium transition hover:border-signal hover:bg-signal">{s.name} in {a.name}</Link>
             ))}
           </div>
-          <h2 className="mt-12 text-4xl font-bold">Other services</h2>
+          <h2 className="mt-12 text-3xl font-bold">Other services</h2>
           <div className="mt-6 flex flex-wrap gap-3">
             {others.map((o) => (
-              <Link key={o.slug} href={`/services/${o.slug}`} className="rounded-full bg-steel px-5 py-2 font-display text-xl font-medium transition hover:bg-ink hover:text-white">{o.name}</Link>
+              <Link key={o.slug} href={`/services/${o.slug}`} className="rounded-full bg-steel px-5 py-2 font-display text-lg font-medium transition hover:bg-ink hover:text-white">{o.name}</Link>
             ))}
           </div>
         </div>

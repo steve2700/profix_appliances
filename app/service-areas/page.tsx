@@ -7,15 +7,15 @@ import { CtaBand } from "@/components/cta-band"
 import { AREAS } from "@/lib/areas"
 
 export const metadata: Metadata = {
-  title: "Truck Repairs Across Gauteng, Areas We Cover",
-  description: "Truck Agents repairs and services heavy duty trucks in Johannesburg, Pretoria, Centurion, Midrand, Germiston, Kempton Park, Boksburg, Benoni, Alberton, Roodepoort, Krugersdorp and Vereeniging.",
+  title: "Appliance Repairs Across Gauteng, Areas We Cover",
+  description: "Profix repairs appliances, electronics and gate motors in Johannesburg, Sandton, Randburg, Roodepoort, Pretoria, Centurion, Midrand, Kempton Park, Germiston, Boksburg, Benoni and Alberton.",
   alternates: { canonical: "/service-areas" },
 }
 
 export default function AreasPage() {
   return (
     <>
-      <PageHero crumbs={[{ name: "Areas", href: "/service-areas" }]} title="Truck repairs across Gauteng and its outskirts" image={{ src: "/truck-agents-white-international-semi-truck.jpg", alt: "White truck tractor ready to hit the road in Gauteng" }} text="Find your area to see how we help truck owners and fleets near you.">
+      <PageHero crumbs={[{ name: "Areas", href: "/service-areas" }]} title="Appliance repairs across Gauteng and its outskirts" image={{ src: "/profix-appliances-fridge-freezer-gas-recharge-repair.jpg", alt: "Technician regassing a fridge freezer" }} text="Find your area to see how we help homes and businesses near you.">
         <CallButton />
         <LinkButton href="/contact#job-card" look="outlineLight">Get a Free Quote</LinkButton>
       </PageHero>
@@ -24,9 +24,9 @@ export default function AreasPage() {
           {AREAS.map((a, i) => (
             <Link key={a.slug} href={`/service-areas/${a.slug}`} className="group relative block overflow-hidden rounded-[2rem]">
               <MovingImage src={a.image} alt={a.imageAlt} variant={i} className="aspect-[4/3]" />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20 text-white">
-                <h2 className="text-4xl font-semibold leading-none">{a.name}</h2>
-                <p className="mt-1 text-silver">Truck repairs and servicing</p>
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/90 to-transparent p-6 pt-20 text-white">
+                <h2 className="text-3xl font-semibold leading-none">{a.name}</h2>
+                <p className="mt-1 text-silver">Appliance and electronics repairs</p>
               </div>
             </Link>
           ))}

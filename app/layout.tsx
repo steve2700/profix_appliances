@@ -2,12 +2,12 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import "@fontsource/barlow-condensed/500.css"
-import "@fontsource/barlow-condensed/600.css"
-import "@fontsource/barlow-condensed/700.css"
-import "@fontsource/barlow/400.css"
-import "@fontsource/barlow/500.css"
-import "@fontsource/barlow/600.css"
+import "@fontsource/outfit/500.css"
+import "@fontsource/outfit/600.css"
+import "@fontsource/outfit/700.css"
+import "@fontsource/dm-sans/400.css"
+import "@fontsource/dm-sans/500.css"
+import "@fontsource/dm-sans/700.css"
 import "./globals.css"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -19,19 +19,19 @@ import { SERVICES } from "@/lib/services"
 import { AREAS } from "@/lib/areas"
 import { BRANDS } from "@/lib/brands"
 
-export const viewport: Viewport = { themeColor: "#0b0b0c" }
+export const viewport: Viewport = { themeColor: "#0b1b34" }
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "Truck Agents | Heavy Duty Truck Repairs, Services and Maintenance in Gauteng",
-    template: "%s | Truck Agents",
+    default: "Profix Electronics & Appliances | Appliance, TV and Gate Repairs in Gauteng",
+    template: "%s | Profix",
   },
   description:
-    "Truck Agents repairs, services and maintains heavy duty trucks across Gauteng and its outskirts. Engines, gearboxes, brakes, spray painting, diesel tanks and trailers. Call Now or send a WhatsApp job card.",
-  keywords: ["heavy duty truck repairs Gauteng", "truck mechanic Johannesburg", "truck servicing Gauteng", "truck engine overhaul", "truck gearbox repairs", "truck spray painting", "Truck Agents"],
-  applicationName: "Truck Agents",
-  authors: [{ name: "Truck Agents", url: SITE.url }],
+    "Profix repairs washing machines, fridges, ovens, microwaves, air conditioners, TVs and gate motors across Gauteng and its outskirts. Call Now or send a WhatsApp job card for a quote.",
+  keywords: ["appliance repairs Gauteng", "washing machine repairs", "fridge repairs", "oven repairs", "microwave repairs", "aircon installation", "TV repairs", "gate motor repairs", "Profix"],
+  applicationName: "Profix",
+  authors: [{ name: "Profix Electronics & Appliances", url: SITE.url }],
   alternates: { canonical: "/" },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
   icons: {
@@ -41,26 +41,26 @@ export const metadata: Metadata = {
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
-    other: [{ rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#d0141c" }],
+    other: [{ rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#ff7a1a" }],
   },
   manifest: "/site.webmanifest",
   openGraph: {
     type: "website",
     locale: "en_ZA",
     url: SITE.url,
-    siteName: "Truck Agents",
-    title: "Truck Agents | Heavy Duty Truck Repairs in Gauteng",
-    description: "Repairs, services and maintenance for heavy duty trucks across Gauteng and its outskirts.",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Truck Agents, heavy duty truck repairs in Gauteng" }],
+    siteName: "Profix Electronics & Appliances",
+    title: "Profix Electronics & Appliances | Repairs in Gauteng",
+    description: "Washing machines, fridges, ovens, microwaves, air conditioners, TVs and gates repaired across Gauteng.",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Profix Electronics and Appliances repairs in Gauteng" }],
   },
-  twitter: { card: "summary_large_image", title: "Truck Agents | Heavy Duty Truck Repairs in Gauteng", description: "Repairs, services and maintenance for heavy duty trucks across Gauteng.", images: ["/og-image.png"] },
-  category: "Truck repairs",
+  twitter: { card: "summary_large_image", title: "Profix Electronics & Appliances | Repairs in Gauteng", description: "Appliance, electronics and gate repairs across Gauteng.", images: ["/og-image.png"] },
+  category: "Appliance repairs",
   other: { "geo.region": "ZA-GP", "geo.placename": "Gauteng, South Africa" },
 }
 
 const businessSchema = {
   "@context": "https://schema.org",
-  "@type": ["AutoRepair", "LocalBusiness"],
+  "@type": ["HomeAndConstructionBusiness", "LocalBusiness"],
   "@id": `${SITE.url}/#business`,
   name: SITE.name,
   url: SITE.url,
@@ -68,7 +68,7 @@ const businessSchema = {
   logo: `${SITE.url}/logo-square.png`,
   telephone: SITE.phoneTel,
   email: SITE.email,
-  description: "Heavy duty truck repairs, servicing and maintenance across Gauteng and its outskirts.",
+  description: "Appliance, electronics and gate repairs across Gauteng and its outskirts.",
   priceRange: "$$",
   knowsAbout: SERVICES.map((s) => s.name),
   brand: BRANDS.map((b) => ({ "@type": "Brand", name: b.name, logo: `${SITE.url}${b.logo}` })),

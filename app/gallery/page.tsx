@@ -2,61 +2,52 @@ import type { Metadata } from "next"
 import { PageHero } from "@/components/page-hero"
 import { MovingImage } from "@/components/moving-image"
 import { CtaBand } from "@/components/cta-band"
-import { BeforeAfter } from "@/components/before-after"
-import { BA_HINO, BA_UD, BA_BED } from "@/lib/services"
 import { CallButton, LinkButton } from "@/components/buttons"
 
 export const metadata: Metadata = {
-  title: "Truck Repair Gallery",
-  description: "Photos from the Truck Agents workshop: engine overhauls, gearbox repairs, spray painting, diesel tank fitting, trailer axles and tipper bodies in Gauteng.",
+  title: "Appliance Repair Gallery",
+  description: "Photos of Profix technicians repairing washing machines, fridges, ovens, microwaves, air conditioners, TVs and gates across Gauteng.",
   alternates: { canonical: "/gallery" },
 }
 
 const photos: [string, string][] = [
-  ["/truck-agents-hino-truck-accident-repair-panel-beating-after.jpg", "Hino truck after accident repair"],
-  ["/truck-agents-ud-truck-cab-repair-restored-after.jpg", "UD truck cab restored after repair"],
-  ["/truck-agents-truck-bed-rubberizing-after-coating.jpg", "Truck bed with rubberized coating"],
-  ["/truck-agents-truck-bed-rubberizing-prep-sanding.jpg", "Truck bed sanded before rubberizing"],
-  ["/truck-agents-white-international-semi-truck.jpg", "White International truck tractor"],
-  ["/truck-agents-volvo-heavy-duty-truck-engine.jpg", "Volvo heavy duty truck engine"],
-  ["/truck-agents-aluminum-diesel-fuel-tank.jpg", "Aluminium diesel fuel tank"],
-  ["/truck-agents-orange-tipper-truck-trailer.jpg", "Orange tipper trailer"],
-  ["/truck-agents-chrome-truck-wheel-tire.jpg", "Chrome truck wheel and tyre"],
-  ["/truck-agents-truck-diesel-tank-fitting.jpg", "Diesel tank fitted to a truck"],
-  ["/truck-agents-mechanics-servicing-trucks-yard.jpg", "Mechanics servicing trucks in the yard"],
-  ["/truck-agents-flatbed-truck-transport-equipment.jpg", "Flatbed truck transporting equipment"],
-  ["/heavy-duty-truck-repairs.jpg", "Heavy duty truck repairs in the workshop"],
-  ["/heavy_duty_truck_repairs.jpg", "Truck with the cab tilted for engine access"],
-  ["/heavy-truck-repairs-shop.jpg", "Heavy truck on the lift"],
-  ["/truck-agents-blue-semi-truck-repair-shop.jpg", "Blue truck tractor under repair"],
-  ["/truck-agents-white-box-truck-engine-service.jpg", "White box truck engine service"],
-  ["/truck-agents-truck-cab-respraying-workshop.jpg", "Truck cab respraying"],
-  ["/truck-agents-truck-cab-spray-painting-prep.jpg", "Truck cab spray painting preparation"],
-  ["/truck-agents-commercial-truck-cab-bodywork.jpg", "Commercial truck cab bodywork"],
-  ["/truck-agents-commercial-truck-transmission-unit.jpg", "Commercial truck transmission unit"],
-  ["/truck-agents-heavy-duty-gearbox-internal-gears.jpg", "Heavy duty gearbox internal gears"],
-  ["/truck-agents-heavy-duty-engine-overhaul-workshop.jpg", "Engine overhaul in the workshop"],
-  ["/truck-agents-transmission-loaded-on-pickup-truck.jpg", "Transmission loaded on a bakkie"],
-  ["/truck-agents-trailer-axle-and-bearing-maintenance.webp", "Trailer axle and bearing maintenance"],
+  ["/profix-appliances-top-load-washing-machine-field-repair.jpg", "Top loader washing machine repaired on site"],
+  ["/profix-appliances-refrigerator-condenser-gas-servicing.jpg", "Fridge serviced on site with a gas cylinder"],
+  ["/profix-electronics-microwave-transformer-magnetron-repair.jpg", "Microwave transformer and magnetron repair"],
+  ["/profix-appliances-air-conditioner-wall-unit-installation.jpg", "Air conditioner wall unit installation"],
+  ["/profix-electronics-samsung-microwave-digital-panel.jpg", "Samsung microwave digital panel"],
+  ["/profix-appliances-built-in-electric-oven-hob.jpg", "Built in electric oven and hob"],
+  ["/profix-appliances-washing-machine-motor-repair.jpg", "Washing machine motor repair"],
+  ["/profix-appliances-fridge-freezer-gas-recharge-repair.jpg", "Fridge freezer regas"],
+  ["/profix-electronics-microwave-internal-components-testing.jpg", "Microwave internal components testing"],
+  ["/profix-appliances-top-load-washing-machine-repair-bench.jpg", "Top loader washing machine opened for repair"],
+  ["/profix-appliances-defy-gemini-petit-chef-oven.jpg", "Defy oven"],
+  ["/profix-appliances-hvac-ac-installation-finished.jpg", "Outdoor air conditioner unit installed on a stand"],
+  ["/profix-appliances-oven-control-board-repair.jpg", "Oven control board repair"],
+  ["/profix-appliances-front-load-washer-dryer-servicing.jpg", "Front load washer dryer servicing"],
+  ["/profix-appliances-gas-stove-burner-servicing.jpg", "Gas stove burner servicing"],
+  ["/profix-electronics-microwave-disassembly-workbench.jpg", "Microwave stripped on a workbench"],
+  ["/profix-appliances-hvac-aircon-manifold-servicing.jpg", "Air conditioner manifold gauge servicing"],
+  ["/profix-appliances-oven-heating-element-repair.jpg", "Oven heating element repair"],
+  ["/profix-appliances-refrigerator-compressor-repair.jpg", "Fridge compressor repair"],
+  ["/profix-appliances-oven-selector-switch-wiring.jpg", "Oven selector switch wiring"],
+  ["/profix-gates-automated-gate-motor-solar-setup.jpg", "Automated gate with solar motor"],
+  ["/profix-gates-technician-welding-palisade-gate.jpg", "Technician welding a palisade gate"],
+  ["/profix-gates-modern-wooden-slat-sliding-gate.jpg", "Modern wooden slat sliding gate"],
+  ["/profix-gates-white-modern-security-gate.jpg", "White modern security gate"],
+  ["/profix-gates-ornate-driveway-gate-welding.jpg", "Ornate driveway gate being welded"],
+  ["/profix-gates-angle-grinder-track-servicing.jpg", "Sliding gate track servicing"],
+  ["/profix-appliances-built-in-gas-hob-installation.jpg", "Built in gas hob installation"],
+  ["/profix-appliances-electric-hob-internal-repair.jpg", "Electric hob internal repair"],
 ]
 
 export default function GalleryPage() {
   return (
     <>
-      <PageHero crumbs={[{ name: "Gallery", href: "/gallery" }]} title="Work from our workshop" image={{ src: "/truck-agents-hino-truck-accident-repair-panel-beating-after.jpg", alt: "Hino truck after accident repair" }} text="Real trucks, real repairs. Every job here came in on a job card.">
+      <PageHero crumbs={[{ name: "Gallery", href: "/gallery" }]} title="Our work, on the job" image={{ src: "/profix-electronics-microwave-transformer-magnetron-repair.jpg", alt: "Microwave repair on a workbench" }} text="Real repairs from real homes. Every job here started with a job card.">
         <CallButton />
         <LinkButton href="/contact#job-card" look="outlineLight">Get a Free Quote</LinkButton>
       </PageHero>
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-7xl px-5">
-          <h2 className="text-5xl font-bold md:text-6xl">Before and after</h2>
-          <div className="mt-10 grid gap-8 lg:grid-cols-3">
-            <BeforeAfter item={BA_HINO} />
-            <BeforeAfter item={BA_UD} />
-            <BeforeAfter item={BA_BED} />
-          </div>
-        </div>
-      </section>
       <section className="mx-auto max-w-7xl px-5 py-20">
         <div className="columns-1 gap-5 sm:columns-2 lg:columns-3">
           {photos.map(([src, alt], i) => (

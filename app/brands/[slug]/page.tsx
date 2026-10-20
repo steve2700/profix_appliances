@@ -3,7 +3,6 @@ import Link from "next/link"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import { PageHero } from "@/components/page-hero"
-import { MovingImage } from "@/components/moving-image"
 import { CallButton, LinkButton, WhatsAppButton } from "@/components/buttons"
 import { Faq } from "@/components/faq"
 import { CtaBand } from "@/components/cta-band"
@@ -23,11 +22,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const b = getBrand(slug)
   if (!b) return {}
-  const title = `${b.name} Truck Repairs and Servicing in Gauteng`
-  const description = `${b.name} truck repairs, servicing and maintenance in Gauteng. Engines, gearboxes, brakes, accident repairs and spray painting. Call Now or send a WhatsApp job card.`
+  const title = `${b.name} Appliance Repairs in Gauteng`
+  const description = `${b.name} repairs in Gauteng: ${b.known}. Fast diagnosis, clear quotes and repairs at your home. Call Now or send a WhatsApp job card to Profix.`
   return {
     title, description,
-    keywords: [`${b.name} truck repairs Gauteng`, `${b.name} truck mechanic`, `${b.name} truck service Johannesburg`, `${b.name} accident repairs`],
+    keywords: [`${b.name} repairs Gauteng`, `${b.name} appliance repair`, `${b.name} technician Johannesburg`, `${b.name} service centre alternative`],
     alternates: { canonical: `/brands/${b.slug}` },
     openGraph: { title, description, url: `${SITE.url}/brands/${b.slug}`, images: [{ url: b.image }] },
   }
@@ -38,22 +37,22 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
   const b = getBrand(slug)
   if (!b) notFound()
   const faqs = [
-    { q: `Do you repair ${b.name} trucks?`, a: `Yes. Truck Agents repairs and services ${b.name} trucks across Gauteng, including mechanical repairs, servicing, brakes, electrical faults and accident repairs.` },
-    { q: `Can you do ${b.name} accident repairs and spray painting?`, a: "Yes. We do panel beating, cab and bumper repairs and full resprays. See our before and after photos for examples." },
+    { q: `Do you repair ${b.name} appliances?`, a: `Yes. Profix repairs ${b.name} appliances across Gauteng, including ${b.known}.` },
+    { q: `Will you repair my ${b.name} at my home?`, a: "In most cases yes. We repair at your home or business. If a part must go to the workshop, we tell you first." },
     { q: `How do I get a quote for my ${b.name}?`, a: `Fill in the job card on this page. It opens in WhatsApp with your ${b.name} details ready to send. Add photos in the chat and we will come back with a quote.` },
   ]
   return (
     <>
-      <JsonLd data={{ "@context": "https://schema.org", "@type": "Service", name: `${b.name} truck repairs`, url: `${SITE.url}/brands/${b.slug}`, provider: { "@id": `${SITE.url}/#business` }, areaServed: { "@type": "AdministrativeArea", name: "Gauteng" }, brand: { "@type": "Brand", name: b.name } }} />
-      <PageHero crumbs={[{ name: "Brands", href: "/brands" }, { name: b.name, href: `/brands/${b.slug}` }]} title={`${b.name} truck repairs in Gauteng`} text={b.intro} image={{ src: b.image, alt: b.imageAlt }}>
+      <JsonLd data={{ "@context": "https://schema.org", "@type": "Service", name: `${b.name} appliance repairs`, url: `${SITE.url}/brands/${b.slug}`, provider: { "@id": `${SITE.url}/#business` }, areaServed: { "@type": "AdministrativeArea", name: "Gauteng" }, brand: { "@type": "Brand", name: b.name } }} />
+      <PageHero crumbs={[{ name: "Brands", href: "/brands" }, { name: b.name, href: `/brands/${b.slug}` }]} title={`${b.name} repairs in Gauteng`} text={b.intro} image={{ src: b.image, alt: b.imageAlt }}>
         <CallButton />
-        <WhatsAppButton message={`Hi Truck Agents, I need a repair on my ${b.name} truck.`} />
+        <WhatsAppButton message={`Hi Profix, I need a repair on my ${b.name}.`} />
         <LinkButton href="#job-card" look="outlineLight">Get a Free Quote</LinkButton>
       </PageHero>
       <section className="mx-auto max-w-7xl px-5 py-20">
-        <div className="flex items-center gap-6">
-          <Image src={b.logo} alt={`${b.name} logo`} width={b.w} height={b.h} className="h-16 w-auto" />
-          <h2 className="text-4xl font-bold md:text-5xl">What we do on {b.name} trucks</h2>
+        <div className="flex flex-wrap items-center gap-6">
+          <div className="flex h-20 items-center rounded-2xl bg-white px-6"><Image src={b.logo} alt={`${b.name} logo`} width={b.w} height={b.h} className="max-h-14 w-auto" /></div>
+          <h2 className="text-3xl font-bold md:text-4xl">What we repair for {b.name} owners</h2>
         </div>
         <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s) => (
@@ -67,15 +66,15 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
       </section>
       <section className="cut-both bg-ink px-5 pb-28 pt-24 text-white">
         <div className="mx-auto max-w-7xl">
-          <h2 className="mb-10 max-w-3xl text-5xl font-bold leading-[0.95] md:text-6xl">Send a job card for your {b.name}</h2>
-          <JobCard defaultTruck={`${b.name} `} />
+          <h2 className="mb-10 max-w-3xl text-4xl font-bold leading-[1.05] md:text-5xl">Send a job card for your {b.name}</h2>
+          <JobCard defaultBrand={b.name} />
         </div>
       </section>
       <section className="mx-auto max-w-4xl px-5 py-20">
-        <h2 className="mb-10 text-5xl font-bold">{b.name} repairs: your questions</h2>
+        <h2 className="mb-10 text-4xl font-bold">{b.name} repairs: your questions</h2>
         <Faq items={faqs} />
       </section>
-      <BrandStrip title="Other brands we work on" />
+      <BrandStrip title="Other brands we repair" />
       <CtaBand />
     </>
   )

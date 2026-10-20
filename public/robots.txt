@@ -1,8 +1,8 @@
-# Truck Agents. Search engines and AI assistants are welcome.
+# Profix Electronics & Appliances. Search engines and AI assistants are welcome.
 User-agent: *
 Allow: /
 
-Sitemap: https://www.truckagents.co.za/sitemap.xml
+Sitemap: https://www.profixappliances.co.za/sitemap.xml
 
 # AI search and assistant crawlers
 User-agent: GPTBot

@@ -7,15 +7,15 @@ import { CtaBand } from "@/components/cta-band"
 import { BRANDS } from "@/lib/brands"
 
 export const metadata: Metadata = {
-  title: "Truck Brands We Repair: Isuzu, Hino, UD, Scania and Mazda",
-  description: "Truck Agents repairs and services Isuzu, Hino, UD Trucks, Scania and Mazda trucks across Gauteng. Mechanical repairs, accident repairs and spray painting.",
+  title: "Appliance Brands We Repair: Defy, LG, Whirlpool, Hisense and more",
+  description: "Profix repairs Defy, LG, Whirlpool, Hisense, Indesit, AEG, GE, KIC and Fridgemaster appliances across Gauteng. Washing machines, fridges, ovens, microwaves and more.",
   alternates: { canonical: "/brands" },
 }
 
 export default function BrandsPage() {
   return (
     <>
-      <PageHero crumbs={[{ name: "Brands", href: "/brands" }]} title="Truck brands we repair" text="From light delivery trucks to heavy haulers, we work on the brands Gauteng operators run." image={{ src: "/truck-agents-white-international-semi-truck.jpg", alt: "Truck tractor ready for the road" }}>
+      <PageHero crumbs={[{ name: "Brands", href: "/brands" }]} title="Appliance brands we repair" image={{ src: "/profix-appliances-defy-gemini-petit-chef-oven.jpg", alt: "Defy oven being repaired" }} text="From everyday family brands to premium built in appliances, we repair the brands South African homes use.">
         <CallButton />
         <LinkButton href="/contact#job-card" look="outlineLight">Get a Free Quote</LinkButton>
       </PageHero>
@@ -23,10 +23,10 @@ export default function BrandsPage() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {BRANDS.map((b) => (
             <Link key={b.slug} href={`/brands/${b.slug}`} className="group rounded-[2rem] bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
-              <Image src={b.logo} alt={`${b.name} logo`} width={b.w} height={b.h} className="h-16 w-auto" />
-              <h2 className="mt-6 text-3xl font-semibold">{b.name} truck repairs</h2>
+              <div className="flex h-16 items-center"><Image src={b.logo} alt={`${b.name} logo`} width={b.w} height={b.h} className="max-h-14 w-auto" /></div>
+              <h2 className="mt-6 text-2xl font-semibold">{b.name} repairs</h2>
               <p className="mt-2 text-graphite">{b.intro}</p>
-              <span className="mt-4 inline-block font-display text-xl font-semibold text-signal">Read more</span>
+              <span className="mt-4 inline-block font-display text-lg font-semibold text-azure">Read more</span>
             </Link>
           ))}
         </div>

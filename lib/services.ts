@@ -1,12 +1,3 @@
-export interface BeforeAfterItem {
-  title: string
-  before: string
-  after: string
-  ratio: string
-  caption: string
-  alt: string
-}
-
 export interface Service {
   slug: string
   name: string
@@ -18,373 +9,296 @@ export interface Service {
   imageAlt: string
   headline: string
   intro: string
+  answer: string
+  appliance: string
   includes: string[]
   signs: string[]
-  faqs: { q: string; a: string }[]
-  answer: string
-  problem: string
-  gallery?: BeforeAfterItem[]
   process?: { src: string; alt: string; caption: string }[]
-}
-
-export const BA_HINO: BeforeAfterItem = {
-  title: "Hino accident repair",
-  before: "/truck-agents-hino-truck-accident-repair-front-damage-before.jpg",
-  after: "/truck-agents-hino-truck-accident-repair-panel-beating-after.jpg",
-  ratio: "3 / 2",
-  caption: "Hino truck with heavy front end damage, rebuilt with panel beating and paint.",
-  alt: "Hino truck accident repair, front damage before and panel beating after",
-}
-export const BA_UD: BeforeAfterItem = {
-  title: "UD cab and bumper repair",
-  before: "/truck-agents-ud-truck-cab-repair-damaged-bumper-before.jpg",
-  after: "/truck-agents-ud-truck-cab-repair-restored-after.jpg",
-  ratio: "1 / 1",
-  caption: "UD truck cab with a damaged bumper, restored and repainted.",
-  alt: "UD truck cab repair, damaged bumper before and restored cab after",
-}
-export const BA_BED: BeforeAfterItem = {
-  title: "Truck bed rubberizing",
-  before: "/truck-agents-truck-bed-rubberizing-before-damaged.jpg",
-  after: "/truck-agents-truck-bed-rubberizing-after-coating.jpg",
-  ratio: "1 / 1",
-  caption: "A worn, damaged truck bed, sanded and sprayed with a tough rubberized coating.",
-  alt: "Truck bed rubberizing, damaged bed before and coated bed after",
+  faqs: { q: string; a: string }[]
 }
 
 export const SERVICES: Service[] = [
   {
-    slug: "heavy-duty-truck-repairs",
-    name: "Heavy Duty Truck Repairs",
-    short: "Breakdowns, faults and full repairs on trucks and truck tractors of every make.",
-    metaTitle: "Heavy Duty Truck Repairs in Gauteng",
+    slug: "washing-machine-and-dishwasher-repairs",
+    name: "Washing Machine and Dishwasher Repairs",
+    short: "Top loaders, front loaders, tumble dryers and dishwashers repaired on site.",
+    metaTitle: "Washing Machine and Dishwasher Repairs in Gauteng",
     metaDescription:
-      "Heavy duty truck repairs across Gauteng. Engines, gearboxes, brakes, electrical and suspension fixed by experienced truck mechanics. Call Now or send a WhatsApp job card.",
-    keywords: ["heavy duty truck repairs Gauteng", "truck mechanic Johannesburg", "truck repair workshop Gauteng", "truck breakdown repairs"],
-    image: "/heavy-duty-truck-repairs.jpg",
-    imageAlt: "Heavy duty truck repairs in the Truck Agents workshop in Gauteng",
-    headline: "Heavy duty truck repairs that get you back on the road",
+      "Washing machine and dishwasher repairs in Gauteng. Leaks, drum faults, motors, pumps and error codes fixed by experienced technicians. Call Now or send a WhatsApp job card.",
+    keywords: ["washing machine repairs Gauteng", "dishwasher repairs Johannesburg", "washing machine repair near me", "tumble dryer repairs"],
+    image: "/profix-appliances-top-load-washing-machine-field-repair.jpg",
+    imageAlt: "Technician repairing a top loader washing machine on site",
+    headline: "Washing machine and dishwasher repairs, done at your home",
     intro:
-      "When a truck stands still, the money stops. Truck Agents repairs heavy duty trucks, truck tractors, rigid trucks and light commercial vehicles across Gauteng. We find the fault, give you a clear quote and fix it properly.",
+      "A broken washing machine or dishwasher turns the whole house upside down. Profix technicians find the fault, explain it in plain language, give you a clear quote and fix it, usually at your home.",
+    answer:
+      "Profix repairs top loader and front loader washing machines, tumble dryers and dishwashers across Gauteng, including leaks, drum and bearing faults, motors, pumps and control boards.",
+    appliance: "Washing machine",
     includes: [
-      "Fault finding and diagnostics",
-      "Engine, gearbox and diff repairs",
-      "Brake, clutch and suspension repairs",
-      "Electrical and wiring repairs",
-      "Cooling system and turbo repairs",
-      "Repairs on all major truck brands",
+      "Leaks, blocked pumps and drain faults",
+      "Drum, bearing and spider arm repairs",
+      "Motor and belt replacements",
+      "Control board and error code faults",
+      "Door seals, locks and hinges",
+      "Dishwasher pumps, spray arms and heaters",
     ],
-    signs: ["Loss of power or heavy smoke", "Overheating or leaking fluids", "Warning lights on the dash", "Hard gear changes or clutch slip", "Brakes pulling or feeling weak"],
-    answer: "Truck Agents repairs heavy duty trucks across Gauteng, including engines, gearboxes, brakes, electrical faults and suspension, and gives a clear quote before work starts.",
-    problem: "Engine problem",
-    faqs: [
-      { q: "Which truck brands do you repair?", a: "We work on Isuzu, Hino, UD Trucks, Scania and Mazda, and on other major heavy duty and commercial brands used on South African roads. Send your truck make and model on the job card and we will confirm." },
-      { q: "Can I get a quote before work starts?", a: "Yes. Send a WhatsApp job card with photos of the problem and we will come back with a clear quote before any work begins." },
-      { q: "Which areas do you cover?", a: "We operate across Gauteng and its outskirts, including Johannesburg, Pretoria, Centurion, Midrand, Germiston, Kempton Park, Boksburg and surrounds." },
-    ],
-  },
-  {
-    slug: "truck-engine-overhauls",
-    name: "Truck Engine Overhauls",
-    short: "Full diesel engine strip downs, rebuilds and overhauls for trucks.",
-    metaTitle: "Truck Engine Overhauls and Rebuilds in Gauteng",
-    metaDescription:
-      "Truck engine overhauls and diesel engine rebuilds in Gauteng. Strip down, inspection, machining and rebuild for Isuzu, Hino, UD, Scania and more. Get a free quote.",
-    keywords: ["truck engine overhaul Gauteng", "diesel engine rebuild Johannesburg", "Volvo truck engine repair", "truck engine reconditioning"],
-    image: "/truck-agents-volvo-heavy-duty-truck-engine.jpg",
-    imageAlt: "Volvo heavy duty truck engine ready for overhaul at Truck Agents",
-    headline: "Truck engine overhauls done properly",
-    intro:
-      "A tired engine costs you in fuel, downtime and breakdowns. We strip, inspect and rebuild heavy duty diesel engines so your truck earns again, and we explain what each part of the job costs before we start.",
-    includes: [
-      "Engine removal and refitting",
-      "Full strip down and inspection",
-      "Head, liner, piston and bearing work",
-      "Turbo and injector refits",
-      "Gasket sets, seals and fresh fluids",
-      "Test run and final check",
-    ],
-    signs: ["Blue or black smoke", "Oil consumption going up", "Low compression or hard starting", "Knocking or unusual noises", "Coolant mixing with oil"],
-    answer: "Truck Agents overhauls and rebuilds heavy duty diesel truck engines in Gauteng, with full strip down, inspection and a clear quote before work begins.",
-    problem: "Engine problem",
-    faqs: [
-      { q: "How long does an engine overhaul take?", a: "It depends on the engine and parts availability. After inspection we give you a realistic time frame on the quote." },
-      { q: "Is an overhaul better than a replacement engine?", a: "It depends on the condition of the block and your budget. We inspect first and tell you which option makes sense." },
-    ],
-  },
-  {
-    slug: "gearbox-and-transmission-repairs",
-    name: "Gearbox and Transmission Repairs",
-    short: "Manual and automated truck gearbox repairs, rebuilds and replacements.",
-    metaTitle: "Truck Gearbox and Transmission Repairs in Gauteng",
-    metaDescription:
-      "Truck gearbox and transmission repairs in Gauteng. Strip down, gear and bearing replacement, synchro repairs and rebuilds. Send a WhatsApp job card for a fast quote.",
-    keywords: ["truck gearbox repairs Gauteng", "truck transmission repair Johannesburg", "gearbox rebuild trucks", "clutch and gearbox truck"],
-    image: "/truck-agents-commercial-truck-transmission-unit.jpg",
-    imageAlt: "Commercial truck transmission unit removed for gearbox repair",
-    headline: "Gearbox and transmission repairs for trucks",
-    intro:
-      "Grinding gears, slipping drives and jumping out of gear all point to the gearbox. We remove, strip, repair and refit truck transmissions, and we show you the worn parts so you know exactly what was wrong.",
-    includes: [
-      "Gearbox removal and refitting",
-      "Gear, bearing and synchro replacement",
-      "Shaft and seal repairs",
-      "Clutch and release bearing work",
-      "Differential and propshaft checks",
-      "Gearbox oil and filter service",
-    ],
-    signs: ["Grinding when changing gear", "Gearbox jumping out of gear", "Whining noise in drive", "Oil leaks at the gearbox", "Clutch slipping or sticking"],
-    answer: "Truck Agents repairs and rebuilds truck gearboxes and transmissions in Gauteng, replacing worn gears, bearings and synchros and refitting the unit.",
-    problem: "Gearbox or clutch",
-    faqs: [
-      { q: "Can you repair a gearbox without replacing it?", a: "Often yes. We strip the unit, replace the worn gears and bearings and rebuild it. If it is beyond repair we tell you honestly." },
-      { q: "Do you handle clutch replacements?", a: "Yes. Clutch work is usually done together with the gearbox so you only pay for the labour once." },
-    ],
-  },
-  {
-    slug: "truck-servicing-and-maintenance",
-    name: "Truck Servicing and Maintenance",
-    short: "Scheduled services and preventative maintenance to keep your fleet moving.",
-    metaTitle: "Truck Servicing and Maintenance in Gauteng",
-    metaDescription:
-      "Truck servicing and fleet maintenance in Gauteng. Oil and filter services, safety checks and scheduled maintenance plans for owner drivers and fleets. Call Now for a quote.",
-    keywords: ["truck service Gauteng", "fleet maintenance Johannesburg", "truck maintenance plans", "diesel truck service"],
-    image: "/truck-agents-white-box-truck-engine-service.jpg",
-    imageAlt: "White box truck on a lift during an engine service",
-    headline: "Truck servicing and maintenance that prevents breakdowns",
-    intro:
-      "A planned service is cheaper than a breakdown on the N1. We service single trucks and whole fleets, and we keep a record of what was done so you always know when the next job is due.",
-    includes: [
-      "Oil, fuel and air filter services",
-      "Greasing and fluid top ups",
-      "Brake and tyre checks",
-      "Belts, hoses and cooling checks",
-      "Pre trip and roadworthy inspections",
-      "Service records for fleet owners",
-    ],
-    signs: ["Service interval is due", "Fuel use is climbing", "Trip is coming up", "Roadworthy test is due", "New truck added to your fleet"],
-    answer: "Truck Agents services trucks and runs scheduled maintenance for owner drivers and fleets across Gauteng, so problems are caught before they cause a breakdown.",
-    problem: "Service or maintenance",
-    faqs: [
-      { q: "Do you offer fleet maintenance plans?", a: "Yes. Tell us how many trucks you run and how far they travel and we will set up a service schedule that fits." },
-      { q: "Can you service my truck at my yard?", a: "For selected jobs and areas, yes. Send a job card with your location and we will confirm what we can do." },
-    ],
-  },
-  {
-    slug: "truck-spray-painting-and-cab-repairs",
-    name: "Truck Spray Painting and Cab Repairs",
-    short: "Panel beating, cab repairs and full truck respraying in your fleet colours.",
-    metaTitle: "Truck Spray Painting and Cab Repairs in Gauteng",
-    metaDescription:
-      "Truck spray painting, cab repairs and panel work in Gauteng. Full cab resprays, accident repairs and fleet colour matching. Send photos on WhatsApp for a free quote.",
-    keywords: ["truck spray painting Gauteng", "truck cab respray", "commercial vehicle panel beating", "truck bodywork repairs"],
-    image: "/truck-agents-ud-truck-cab-repair-restored-after.jpg",
-    imageAlt: "UD truck cab repaired and repainted by Truck Agents",
-    headline: "Truck spray painting and cab repairs",
-    intro:
-      "A clean, well painted truck tells clients you run a serious business. We repair and respray cabs, bodies and panels, and we match your fleet colours so every truck looks the part.",
-    includes: [
-      "Full cab and body resprays",
-      "Accident damage and panel repairs",
-      "Surface prep, masking and primer",
-      "Fleet colour matching",
-      "Door, bumper and fibreglass repairs",
-      "Clear coat and polish",
-    ],
-    signs: ["Faded or peeling paint", "Rust patches on the cab", "Accident damage", "New fleet branding", "Cracked fibreglass or bumpers"],
-    gallery: [BA_UD],
+    signs: ["Water on the floor", "Machine will not spin or drain", "Loud banging or grinding", "Error codes on the display", "Dishes still dirty after a cycle"],
     process: [
-      { src: "/truck-agents-truck-cab-respraying-workshop.jpg", alt: "Truck cab masked and prepared for respraying", caption: "Masked and prepped" },
-      { src: "/truck-agents-truck-cab-spray-painting-prep.jpg", alt: "Truck cab covered ready for spray painting", caption: "Ready for paint" },
+      { src: "/profix-appliances-top-load-washing-machine-repair-bench.jpg", alt: "Top loader washing machine opened for repair", caption: "Diagnosing the fault" },
+      { src: "/profix-appliances-washing-machine-motor-repair.jpg", alt: "Washing machine motor being repaired", caption: "Motor repair" },
+      { src: "/profix-appliances-front-load-washer-dryer-servicing.jpg", alt: "Front load washer being serviced", caption: "Front loader service" },
     ],
-    answer: "Truck Agents repairs and respray truck cabs and bodies in Gauteng, including fleet colour matching, accident touch ups and full cab resprays.",
-    problem: "Spray painting or cab repair",
     faqs: [
-      { q: "Can you match my fleet colours?", a: "Yes. Send us the paint code or a clear photo and we will match it as closely as possible." },
-      { q: "Can I get a quote from photos?", a: "Yes. Photos from a few angles on WhatsApp are usually enough for a first quote." },
+      { q: "Do you repair washing machines at my home?", a: "Yes. In most cases we repair your washing machine or dishwasher at your home. If a part needs to go to the workshop, we will tell you before we take it." },
+      { q: "Which brands do you repair?", a: "We repair brands including Defy, LG, Whirlpool, Indesit, AEG and Hisense. Put the brand and model on the job card and we will confirm." },
+      { q: "Is it worth repairing an old washing machine?", a: "Often yes. We give you an honest opinion after the diagnosis, including when a repair does not make sense." },
     ],
   },
   {
-    slug: "diesel-tank-fitting-and-fuel-system-repairs",
-    name: "Diesel Tank Fitting and Fuel System Repairs",
-    short: "Fuel tank fitting, repairs, injectors and fuel pumps for trucks.",
-    metaTitle: "Diesel Tank Fitting and Fuel System Repairs in Gauteng",
+    slug: "fridge-and-freezer-repairs",
+    name: "Fridge and Freezer Repairs",
+    short: "Not cooling, leaking or noisy? We repair fridges and freezers, including regassing.",
+    metaTitle: "Fridge and Freezer Repairs in Gauteng",
     metaDescription:
-      "Diesel tank fitting and truck fuel system repairs in Gauteng. Aluminium and steel tanks, injectors, fuel pumps and fuel leaks fixed fast. Call Now or WhatsApp us.",
-    keywords: ["diesel tank fitting Gauteng", "truck fuel tank repairs", "injector and fuel pump repairs", "aluminium diesel tank truck"],
-    image: "/truck-agents-aluminum-diesel-fuel-tank.jpg",
-    imageAlt: "Aluminium diesel fuel tank with straps ready to fit on a truck",
-    headline: "Diesel tank fitting and fuel system repairs",
+      "Fridge and freezer repairs in Gauteng. Not cooling, gas leaks, compressors, thermostats and fans fixed by experienced technicians. Call Now or send a WhatsApp job card for a quote.",
+    keywords: ["fridge repairs Gauteng", "freezer repairs Johannesburg", "fridge not cooling", "regas fridge", "fridge compressor repair"],
+    image: "/profix-appliances-refrigerator-condenser-gas-servicing.jpg",
+    imageAlt: "Fridge being serviced on site with a gas cylinder",
+    headline: "Fridge and freezer repairs that save your food",
     intro:
-      "Fuel problems cost money every kilometre. We fit new and replacement diesel tanks, repair leaks and service the whole fuel system, from the tank to the injectors.",
+      "When a fridge stops cooling, food is lost fast. We repair fridges and freezers across Gauteng, from simple thermostat faults to gas leaks and compressor replacements.",
+    answer:
+      "Profix repairs fridges and freezers across Gauteng, including cooling faults, gas leaks and regassing, compressors, fans, thermostats and door seals.",
+    appliance: "Fridge or freezer",
     includes: [
-      "Aluminium and steel tank fitting",
-      "Tank brackets, straps and lines",
-      "Fuel leak repairs",
-      "Injector and fuel pump repairs",
-      "Fuel filter and water separator service",
-      "Bleeding and test run",
+      "Fridge and freezer regassing",
+      "Compressor testing and replacement",
+      "Thermostat and defrost system repairs",
+      "Fan motor and condenser repairs",
+      "Door seal and hinge replacement",
+      "Side by side and double door models",
     ],
-    signs: ["Diesel smell or visible leaks", "Hard starting or stalling", "Black smoke and low power", "Damaged or dented tank", "Water in the fuel"],
-    answer: "Truck Agents fits and repairs aluminium and steel diesel tanks and services truck fuel systems, including injectors and fuel pumps, across Gauteng.",
-    problem: "Diesel tank or fuel system",
-    faqs: [
-      { q: "Can you fit a larger diesel tank?", a: "Yes. Tell us the truck model and the tank size you need and we will advise on fitment." },
-      { q: "Do you repair injectors?", a: "Yes. We test and repair or replace injectors and fuel pumps as part of fuel system work." },
-    ],
-  },
-  {
-    slug: "trailer-axle-and-bearing-maintenance",
-    name: "Trailer Axle and Bearing Maintenance",
-    short: "Axle, hub and wheel bearing repairs for trailers and truck rear ends.",
-    metaTitle: "Trailer Axle and Wheel Bearing Maintenance in Gauteng",
-    metaDescription:
-      "Trailer axle repairs and wheel bearing maintenance in Gauteng. Hubs, bearings, seals and brakes for trailers and trucks. Call Now or WhatsApp a job card for a quote.",
-    keywords: ["trailer axle repairs Gauteng", "wheel bearing replacement truck", "trailer maintenance Johannesburg", "hub and brake repairs trailer"],
-    image: "/truck-agents-trailer-axle-and-bearing-maintenance.webp",
-    imageAlt: "Trailer axle hub and bearing parts laid out during maintenance",
-    headline: "Trailer axle and bearing maintenance",
-    intro:
-      "Worn bearings and dry hubs end with a wheel off on the road. We strip, inspect, repack and replace axle and bearing components on trailers and truck rear ends before they let you down.",
-    includes: [
-      "Wheel bearing replacement",
-      "Hub, seal and race repairs",
-      "Axle straightening checks",
-      "Trailer brake and drum work",
-      "Suspension bush and spring repairs",
-      "Repacking and greasing",
-    ],
-    signs: ["Hot hubs after a trip", "Grease leaking at the wheel", "Wheel wobble or noise", "Uneven tyre wear", "Brakes dragging on the trailer"],
-    answer: "Truck Agents maintains trailer axles, hubs and wheel bearings across Gauteng, preventing wheel failures with inspection, repacking and replacement.",
-    problem: "Trailer axle or bearings",
-    faqs: [
-      { q: "How often should trailer bearings be checked?", a: "At every service and before long trips. Heavy loads and rough roads mean more frequent checks." },
-      { q: "Do you work on superlink trailers?", a: "Yes. We repair and maintain axles and bearings on a range of trailers. Tell us the trailer type on your job card." },
-    ],
-  },
-  {
-    slug: "tipper-and-trailer-body-repairs",
-    name: "Tipper and Trailer Body Repairs",
-    short: "Repairs and fabrication for tipper bodies, flatbeds and trailers.",
-    metaTitle: "Tipper and Trailer Body Repairs in Gauteng",
-    metaDescription:
-      "Tipper body, flatbed and trailer repairs in Gauteng. Welding, fabrication, hydraulics and floor repairs for tippers and trailers. Send a WhatsApp job card for a free quote.",
-    keywords: ["tipper body repairs Gauteng", "flatbed truck repairs", "trailer body repairs Johannesburg", "truck welding and fabrication"],
-    image: "/truck-agents-orange-tipper-truck-trailer.jpg",
-    imageAlt: "Orange tipper trailer after body repairs and painting",
-    headline: "Tipper and trailer body repairs",
-    intro:
-      "Your body earns the money, so it has to be sound. We weld, fabricate and repair tipper bodies, flatbeds and trailers, and we paint them so the repair lasts.",
-    includes: [
-      "Welding and fabrication",
-      "Floor, side and tailgate repairs",
-      "Hydraulic ram and hose repairs",
-      "Flatbed and loadbed repairs",
-      "Tail lifts, rails and guards",
-      "Painting and protective coatings",
-    ],
-    signs: ["Cracks or worn floors", "Tailgate not sealing", "Slow or uneven tipping", "Damaged side rails", "Body paint and rust damage"],
-    answer: "Truck Agents repairs tipper bodies, flatbeds and trailers in Gauteng, including welding, fabrication, hydraulics and protective painting.",
-    problem: "Tipper or body repair",
-    faqs: [
-      { q: "Can you repair hydraulic tipping systems?", a: "Yes. We repair rams, hoses and valves as part of tipper body work." },
-      { q: "Do you do custom fabrication?", a: "Yes. Send us the details and photos and we will quote on the fabrication." },
-    ],
-  },
-  {
-    slug: "truck-wheel-tyre-and-brake-repairs",
-    name: "Truck Wheel, Tyre and Brake Repairs",
-    short: "Wheel, hub, tyre and brake work to keep loaded trucks safe.",
-    metaTitle: "Truck Wheel, Tyre and Brake Repairs in Gauteng",
-    metaDescription:
-      "Truck wheel, tyre and brake repairs in Gauteng. Brake relines, drums, air brake systems, hubs and wheel alignment checks. Call Now for fast truck brake repairs.",
-    keywords: ["truck brake repairs Gauteng", "air brake repairs trucks", "truck wheel and hub repairs", "truck tyre and wheel Johannesburg"],
-    image: "/truck-agents-chrome-truck-wheel-tire.jpg",
-    imageAlt: "Chrome truck wheel and tyre on a heavy duty truck",
-    headline: "Truck wheel, tyre and brake repairs",
-    intro:
-      "Brakes and wheels carry the most risk on a loaded truck. We inspect, repair and replace brake and wheel components so your truck stops straight and rolls true.",
-    includes: [
-      "Brake relining and drum work",
-      "Air brake lines, valves and chambers",
-      "Wheel hub and stud repairs",
-      "Tyre fitting and rotation",
-      "Brake balance checks",
-      "Roadworthy preparation",
-    ],
-    signs: ["Brake pedal feels soft", "Air leaks when parked", "Truck pulls to one side", "Vibration at speed", "Worn or damaged tyres"],
-    answer: "Truck Agents repairs truck brakes, wheels, hubs and air brake systems in Gauteng and prepares trucks for roadworthy tests.",
-    problem: "Brakes",
-    faqs: [
-      { q: "Can you prepare my truck for a roadworthy?", a: "Yes. We check and repair the items that matter for the test so your truck is ready to pass." },
-      { q: "Do you repair air brake systems?", a: "Yes. We repair valves, lines, chambers and compressors on air brake systems." },
-    ],
-  },
-  {
-    slug: "truck-accident-repairs-and-panel-beating",
-    name: "Truck Accident Repairs and Panel Beating",
-    short: "Front end rebuilds, cab repairs and panel beating after accidents.",
-    metaTitle: "Truck Accident Repairs and Panel Beating in Gauteng",
-    metaDescription:
-      "Truck accident repairs and panel beating in Gauteng. Front end damage, cab repairs, bumpers and full resprays for Hino, UD, Isuzu and more. See before and after photos and get a quote.",
-    keywords: ["truck accident repairs Gauteng", "truck panel beating Johannesburg", "Hino accident repair", "UD truck cab repair", "commercial vehicle collision repair"],
-    image: "/truck-agents-hino-truck-accident-repair-panel-beating-after.jpg",
-    imageAlt: "Hino truck after accident repair and panel beating in Gauteng",
-    headline: "Truck accident repairs and panel beating",
-    intro:
-      "An accident does not have to end a truck. We rebuild damaged fronts, repair cabs and bumpers, straighten panels and repaint, so the truck goes back to work looking right. Look at the before and after photos below.",
-    includes: [
-      "Front end and cab rebuilds",
-      "Panel beating and straightening",
-      "Bumper, grille and light repairs",
-      "Fibreglass and body filler work",
-      "Full cab and body resprays",
-      "Quotes from photos for insurers and owners",
-    ],
-    signs: ["Front end or cab damage", "Cracked or missing bumper", "Dented doors and panels", "Insurance quote needed", "Truck needs to look right for clients"],
-    answer: "Truck Agents rebuilds and repairs accident damaged trucks in Gauteng, including Hino and UD cabs, with panel beating, bumper repairs and full resprays. Send photos on WhatsApp for a quote.",
-    problem: "Accident damage or panel beating",
-    gallery: [BA_HINO, BA_UD],
-    faqs: [
-      { q: "Can you repair a truck with heavy front damage?", a: "Yes. We have rebuilt Hino trucks with serious front end damage. Send photos from a few angles and we will tell you what is possible and what it costs." },
-      { q: "Do you work with insurance quotes?", a: "Yes. We can provide a written quote from photos or after inspection that you can send to your insurer." },
-      { q: "Will the paint match?", a: "We match the cab colour as closely as possible, and for fleets we can match your fleet colour code." },
-    ],
-  },
-  {
-    slug: "truck-bed-rubberizing",
-    name: "Truck Bed Rubberizing",
-    short: "Tough sprayed rubber coating for bakkie and truck beds.",
-    metaTitle: "Truck Bed Rubberizing and Bed Liner Coating in Gauteng",
-    metaDescription:
-      "Truck bed rubberizing and spray on bed liner coating in Gauteng. Repair, sand and coat damaged truck beds for a tough, non slip finish. See before and after photos and get a free quote.",
-    keywords: ["truck bed rubberizing Gauteng", "bakkie bed liner Johannesburg", "spray on bed liner", "truck bed coating", "rubberized truck bed"],
-    image: "/truck-agents-truck-bed-rubberizing-after-coating.jpg",
-    imageAlt: "Truck bed after rubberized coating by Truck Agents",
-    headline: "Truck bed rubberizing that protects your load bed",
-    intro:
-      "A worn, rusty or damaged bed loses value fast. We repair the bed, sand and prepare the surface, then spray a tough rubberized coating that grips loads, resists scratches and keeps water out.",
-    includes: [
-      "Bed repair and rust treatment",
-      "Full sanding and surface prep",
-      "Rubberized spray coating",
-      "Non slip, scratch resistant finish",
-      "Bakkie and light truck beds",
-      "Fleet bed protection",
-    ],
-    signs: ["Rust or bare metal in the bed", "Deep scratches and dents", "Loads sliding around", "New truck needs protection", "Resale value is dropping"],
-    answer: "Truck Agents repairs, sands and sprays a rubberized coating on bakkie and truck beds in Gauteng for a tough, non slip, scratch resistant finish.",
-    problem: "Bed liner or rubberizing",
-    gallery: [BA_BED],
+    signs: ["Not cooling or not freezing", "Ice build up inside", "Water leaking onto the floor", "Fridge running non stop", "Strange humming or clicking"],
     process: [
-      { src: "/truck-agents-truck-bed-rubberizing-before-damaged.jpg", alt: "Damaged truck bed before rubberizing", caption: "Damaged bed" },
-      { src: "/truck-agents-truck-bed-rubberizing-prep-sanding.jpg", alt: "Truck bed sanded and prepared for rubberized coating", caption: "Sanded and prepped" },
-      { src: "/truck-agents-truck-bed-rubberizing-after-coating.jpg", alt: "Finished rubberized truck bed", caption: "Coated and finished" },
+      { src: "/profix-appliances-fridge-freezer-gas-recharge-repair.jpg", alt: "Fridge freezer being regassed with gauges connected", caption: "Regassing" },
+      { src: "/profix-appliances-refrigerator-compressor-repair.jpg", alt: "Fridge compressor repair with gauges on the back of the unit", caption: "Compressor repair" },
+      { src: "/profix-appliances-refrigerator-gas-manifold-diagnostics.jpg", alt: "Gas manifold gauges connected during fridge diagnostics", caption: "Gas diagnostics" },
     ],
     faqs: [
-      { q: "How long does bed rubberizing take?", a: "It depends on the condition of the bed. We repair and sand first, then spray. We give you a time frame with your quote." },
-      { q: "Can you rubberize a damaged bed?", a: "Yes. We repair damage and treat rust first so the coating bonds well and lasts." },
-      { q: "Do you coat fleet trucks?", a: "Yes. Tell us how many trucks you have and we will quote for the fleet." },
+      { q: "Why is my fridge not cooling?", a: "Common causes are a gas leak, a faulty compressor, a failed fan or a thermostat problem. We test each one before quoting." },
+      { q: "Can you regas a fridge at my home?", a: "Yes. We regas fridges and freezers on site where the unit is accessible, after fixing the leak." },
+      { q: "How fast should I act on a warm fridge?", a: "Quickly. Move perishables to a cool box and call us. A fast repair saves food and often saves the compressor." },
+    ],
+  },
+  {
+    slug: "oven-stove-and-hob-repairs",
+    name: "Oven, Stove and Hob Repairs",
+    short: "Electric and gas ovens, stoves and hobs repaired, serviced and installed.",
+    metaTitle: "Oven, Stove and Hob Repairs in Gauteng",
+    metaDescription:
+      "Oven, stove and hob repairs in Gauteng. Heating elements, control boards, selector switches and gas burners fixed, plus built in oven and hob installations. Call Now for a quote.",
+    keywords: ["oven repairs Gauteng", "stove repairs Johannesburg", "hob repairs", "oven heating element replacement", "gas stove repairs"],
+    image: "/profix-appliances-built-in-electric-oven-hob.jpg",
+    imageAlt: "Built in electric oven and hob in a kitchen",
+    headline: "Oven, stove and hob repairs for your kitchen",
+    intro:
+      "When the oven will not heat or a hob plate goes cold, dinner is cancelled. We repair and service electric and gas ovens, stoves and hobs, and we install built in units.",
+    answer:
+      "Profix repairs electric and gas ovens, stoves and hobs across Gauteng, including heating elements, thermostats, selector switches, control boards and gas burners, and installs built in ovens and hobs.",
+    appliance: "Oven, stove or hob",
+    includes: [
+      "Oven heating element replacement",
+      "Thermostat and selector switch repairs",
+      "Oven control board repairs",
+      "Hob plate and ceramic hob repairs",
+      "Gas burner servicing and ignition faults",
+      "Built in oven and hob installation",
+    ],
+    signs: ["Oven not heating or heating unevenly", "Hob plate not working", "Gas burner will not light", "Tripping the power", "Display or timer not working"],
+    process: [
+      { src: "/profix-appliances-oven-control-board-repair.jpg", alt: "Oven control board being repaired", caption: "Control board repair" },
+      { src: "/profix-appliances-oven-heating-element-repair.jpg", alt: "Oven heating element being replaced", caption: "New heating element" },
+      { src: "/profix-appliances-gas-stove-burner-servicing.jpg", alt: "Gas stove burner servicing by a technician", caption: "Gas burner service" },
+    ],
+    faqs: [
+      { q: "Do you repair gas stoves?", a: "Yes. We service gas burners and repair ignition and control faults. Gas work is done with safety checks." },
+      { q: "Can you install a built in oven and hob?", a: "Yes. We install built in ovens and hobs and check that everything works before we leave." },
+      { q: "Why is my oven not heating?", a: "It is often a failed heating element, thermostat or selector switch. We test the parts and replace the one at fault." },
+    ],
+  },
+  {
+    slug: "microwave-oven-repairs",
+    name: "Microwave Oven Repairs",
+    short: "Microwaves not heating, sparking or dead? We repair magnetrons, transformers and boards.",
+    metaTitle: "Microwave Oven Repairs in Gauteng",
+    metaDescription:
+      "Microwave oven repairs in Gauteng. Not heating, sparking, dead display or noisy? Magnetron, transformer, diode and control board repairs. Call Now or send a WhatsApp job card.",
+    keywords: ["microwave repairs Gauteng", "microwave not heating", "magnetron replacement", "Samsung microwave repair", "microwave repair Johannesburg"],
+    image: "/profix-electronics-microwave-transformer-magnetron-repair.jpg",
+    imageAlt: "Microwave transformer and magnetron being repaired on a workbench",
+    headline: "Microwave oven repairs by real electronics technicians",
+    intro:
+      "A microwave that runs but does not heat is usually repairable. We test with proper instruments and replace the part at fault, so you do not pay for a new microwave you do not need.",
+    answer:
+      "Profix repairs microwave ovens across Gauteng, including magnetrons, high voltage transformers, diodes, capacitors, door switches and digital control panels.",
+    appliance: "Microwave",
+    includes: [
+      "Magnetron testing and replacement",
+      "High voltage transformer and diode repairs",
+      "Door switch and latch repairs",
+      "Digital control panel faults",
+      "Turntable motor and fan repairs",
+      "Safety checks after every repair",
+    ],
+    signs: ["Runs but does not heat", "Sparking or burning smell", "Display dead or blank", "Loud humming or buzzing", "Door will not close properly"],
+    process: [
+      { src: "/profix-electronics-microwave-internal-components-testing.jpg", alt: "Microwave internal components being tested", caption: "Testing the parts" },
+      { src: "/profix-electronics-microwave-disassembly-workbench.jpg", alt: "Microwave stripped down on a workbench", caption: "Stripped for repair" },
+      { src: "/profix-electronics-samsung-microwave-digital-panel.jpg", alt: "Samsung microwave with a digital control panel", caption: "Digital panel faults" },
+    ],
+    faqs: [
+      { q: "Is it worth repairing a microwave?", a: "For many faults yes. We diagnose first and tell you honestly whether a repair costs less than a replacement." },
+      { q: "Is microwave repair safe?", a: "Microwaves hold dangerous voltage even when switched off. Our technicians discharge and test them safely. Please never open one yourself." },
+    ],
+  },
+  {
+    slug: "air-conditioner-installation-and-repairs",
+    name: "Air Conditioner Installation and Repairs",
+    short: "Aircon installation, servicing, regassing and repairs for homes and offices.",
+    metaTitle: "Air Conditioner Installation and Repairs in Gauteng",
+    metaDescription:
+      "Air conditioner installation, servicing and repairs in Gauteng. Wall mounted splits, regassing, leaks and electrical faults. Call Now or send a WhatsApp job card for a free quote.",
+    keywords: ["aircon installation Gauteng", "air conditioner repairs Johannesburg", "aircon regas", "split unit installation", "aircon service"],
+    image: "/profix-appliances-air-conditioner-wall-unit-installation.jpg",
+    imageAlt: "Wall mounted air conditioner unit being installed",
+    headline: "Air conditioner installation, service and repairs",
+    intro:
+      "A well installed and serviced air conditioner cools better and costs less to run. We install wall mounted split units, service them and repair faults across Gauteng.",
+    answer:
+      "Profix installs, services and repairs wall mounted air conditioners across Gauteng, including regassing, leak repairs, electrical faults and outdoor unit installation.",
+    appliance: "Air conditioner",
+    includes: [
+      "Wall mounted split unit installation",
+      "Aircon servicing and cleaning",
+      "Regassing and leak repairs",
+      "Electrical and control faults",
+      "Outdoor unit stands and piping",
+      "Fault finding with gauges",
+    ],
+    signs: ["Not cooling or heating", "Water leaking inside", "Ice on the unit", "Strange noises or smells", "Needs a new installation"],
+    process: [
+      { src: "/profix-appliances-hvac-ac-installation-finished.jpg", alt: "Outdoor air conditioner unit installed on a stand", caption: "Finished installation" },
+      { src: "/profix-appliances-hvac-aircon-manifold-servicing.jpg", alt: "Air conditioner serviced with gauges connected", caption: "Gas and pressure checks" },
+      { src: "/profix-appliances-wall-mounted-aircon-unit.jpg", alt: "Wall mounted air conditioner unit on a house wall", caption: "Wall mounted unit" },
+    ],
+    faqs: [
+      { q: "Do you install air conditioners?", a: "Yes. We install wall mounted split units, including the outdoor stand, piping and electrical connections." },
+      { q: "How often should an aircon be serviced?", a: "Once a year is a good rule, and more often in dusty areas. A service keeps it cooling and helps prevent leaks." },
+    ],
+  },
+  {
+    slug: "tv-and-electronics-repairs",
+    name: "TV and Electronics Repairs",
+    short: "Flat screen TV, soundbar and home electronics repairs by trained technicians.",
+    metaTitle: "TV and Electronics Repairs in Gauteng",
+    metaDescription:
+      "TV and electronics repairs in Gauteng. Flat screen TVs, motherboards, power supplies and backlights tested and repaired. Call Now or send a WhatsApp job card for a quote.",
+    keywords: ["TV repairs Gauteng", "flat screen TV repair Johannesburg", "TV motherboard repair", "electronics repairs", "LED TV repair"],
+    image: "/profix-electronics-flat-screen-tv-disassembly.jpg",
+    imageAlt: "Flat screen TV opened up for repair",
+    headline: "TV and electronics repairs you can trust",
+    intro:
+      "A TV that will not switch on or has lines on the screen does not always need replacing. Our electronics technicians test the board, power supply and backlight, and repair what is faulty.",
+    answer:
+      "Profix repairs flat screen TVs and home electronics across Gauteng, including motherboards, power supplies and backlight faults, with a clear quote before work starts.",
+    appliance: "TV or electronics",
+    includes: [
+      "No power and standby light faults",
+      "Motherboard and power supply repairs",
+      "Backlight and screen faults",
+      "Sound and HDMI problems",
+      "Soundbar and home theatre repairs",
+      "Component level circuit board work",
+    ],
+    signs: ["TV will not switch on", "Lines or dark patches on screen", "Sound but no picture", "Keeps restarting", "HDMI or input not working"],
+    process: [
+      { src: "/profix-electronics-tv-screen-repair-team.jpg", alt: "Technicians repairing a flat screen TV on the floor", caption: "TV repair in progress" },
+      { src: "/profix-electronics-tv-motherboard-diagnostics.jpg", alt: "TV motherboard being diagnosed", caption: "Motherboard diagnostics" },
+      { src: "/profix-electronics-multimeter-circuit-testing.jpg", alt: "Multimeter testing a circuit board", caption: "Circuit testing" },
+    ],
+    faqs: [
+      { q: "Can you repair a cracked TV screen?", a: "A cracked panel is usually not economical to replace. We tell you honestly. Faults on the boards and power supply are usually repairable." },
+      { q: "How do I get a quote?", a: "Send a job card with the TV brand, model and a short description of what it is doing. A photo of the screen helps." },
+    ],
+  },
+  {
+    slug: "circuit-board-and-appliance-electrical-repairs",
+    name: "Circuit Board and Appliance Electrical Repairs",
+    short: "Control boards, wiring harnesses and electrical faults repaired with test instruments.",
+    metaTitle: "Appliance Circuit Board and Electrical Repairs in Gauteng",
+    metaDescription:
+      "Appliance circuit board and electrical repairs in Gauteng. Control boards, wiring harnesses, selector switches and sensors tested and repaired. Call Now or send a WhatsApp job card.",
+    keywords: ["appliance circuit board repair Gauteng", "control board repair", "wiring harness repair", "appliance electrical faults", "multimeter testing"],
+    image: "/profix-appliances-oven-control-board-repair.jpg",
+    imageAlt: "Oven control board exposed for repair",
+    headline: "Circuit board and appliance electrical repairs",
+    intro:
+      "Many appliance faults are electrical, not mechanical. We test control boards, wiring and switches with proper instruments and repair the fault, so you do not replace the whole appliance.",
+    answer:
+      "Profix repairs appliance control boards, wiring harnesses, selector switches, sensors and power faults across Gauteng, testing with a multimeter before replacing any part.",
+    appliance: "Something else",
+    includes: [
+      "Control and display board repairs",
+      "Wiring harness and connector repairs",
+      "Selector switch and relay replacement",
+      "Sensor and thermostat testing",
+      "Burnt and shorted component repairs",
+      "Multimeter and instrument testing",
+    ],
+    signs: ["Appliance dead with no lights", "Trips the power", "Burning smell", "Display shows odd symbols", "Works then stops randomly"],
+    process: [
+      { src: "/profix-appliances-oven-selector-switch-wiring.jpg", alt: "Oven selector switch and wiring", caption: "Selector switch and wiring" },
+      { src: "/profix-electronics-microwave-multimeter-voltage-check.jpg", alt: "Technician checking voltage with a multimeter inside a microwave", caption: "Voltage checks" },
+      { src: "/profix-electronics-multimeter-circuit-testing.jpg", alt: "Multimeter testing a circuit board", caption: "Board testing" },
+    ],
+    faqs: [
+      { q: "Can a faulty control board be repaired?", a: "Often yes. We test the board and replace the failed component, which is usually cheaper than a new board." },
+      { q: "What appliances do you do electrical repairs on?", a: "Washing machines, ovens, fridges, microwaves, air conditioners and TVs. If it plugs in, we can usually test it." },
+    ],
+  },
+  {
+    slug: "gate-motor-and-gate-repairs",
+    name: "Gate Motor and Gate Repairs",
+    short: "Sliding and swing gate repairs, tracks, welding and automated gate motors.",
+    metaTitle: "Gate Motor and Gate Repairs in Gauteng",
+    metaDescription:
+      "Gate motor and gate repairs in Gauteng. Sliding gate tracks, welding, palisade gates and automated gate motors with solar options. Call Now or send a WhatsApp job card for a quote.",
+    keywords: ["gate motor repairs Gauteng", "sliding gate repairs Johannesburg", "gate welding", "automated gate installation", "solar gate motor"],
+    image: "/profix-gates-automated-gate-motor-solar-setup.jpg",
+    imageAlt: "Automated gate with a solar powered gate motor",
+    headline: "Gate motor and gate repairs",
+    intro:
+      "When the gate will not open, you are locked in or out. We repair sliding and swing gates, service tracks and rollers, weld damaged frames and set up automated gate motors.",
+    answer:
+      "Profix repairs and services sliding and swing gates across Gauteng, including tracks, welding and automated gate motors with solar options.",
+    appliance: "Gate or gate motor",
+    includes: [
+      "Sliding gate track and roller repairs",
+      "Welding and gate frame repairs",
+      "Gate motor installation and repairs",
+      "Solar powered gate motor setups",
+      "Palisade and decorative gates",
+      "Remote and keypad faults",
+    ],
+    signs: ["Gate sticks or jumps off the track", "Motor hums but gate does not move", "Remote not working", "Damaged or bent frame", "Needs automating"],
+    process: [
+      { src: "/profix-gates-technician-welding-palisade-gate.jpg", alt: "Technician welding a palisade gate", caption: "Welding repairs" },
+      { src: "/profix-gates-angle-grinder-track-servicing.jpg", alt: "Technician using an angle grinder on a sliding gate track", caption: "Track servicing" },
+      { src: "/profix-gates-modern-wooden-slat-sliding-gate.jpg", alt: "Modern wooden slat sliding gate", caption: "Finished sliding gate" },
+    ],
+    faqs: [
+      { q: "Can you automate my existing gate?", a: "In most cases yes. We check the gate and track, then quote for the motor and setup." },
+      { q: "Do you offer solar gate motors?", a: "Yes. Solar powered gate motors keep working during load shedding. Tell us about your gate on the job card." },
     ],
   },
 ]

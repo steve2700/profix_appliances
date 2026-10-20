@@ -7,36 +7,35 @@ import { BrandStrip } from "@/components/brand-strip"
 import { CallButton, WhatsAppButton } from "@/components/buttons"
 
 export const metadata: Metadata = {
-  title: "Truck Repair FAQ",
-  description: "Answers to common questions about truck repairs, quotes, servicing, fleet maintenance and areas covered by Truck Agents in Gauteng.",
+  title: "Appliance Repair FAQ",
+  description: "Answers to common questions about appliance repairs, quotes, brands, air conditioner installation and areas covered by Profix in Gauteng.",
   alternates: { canonical: "/faq" },
 }
 
 const items = [
-  { q: "What areas do you cover?", a: "We operate across Gauteng and its outskirts, including Johannesburg, Pretoria, Centurion, Midrand, Germiston, Kempton Park, Boksburg, Benoni, Alberton, Roodepoort, Krugersdorp and Vereeniging." },
-  { q: "How do I get a quote?", a: "Complete the job card on our website. It opens in WhatsApp, ready to send. Add photos of the problem and we will come back with a quote." },
-  { q: "Which truck brands do you repair?", a: "We work on Isuzu, Hino, UD Trucks, Scania and Mazda, and on other major heavy duty and commercial brands used in South Africa. Put your make and model on the job card and we will confirm." },
-  { q: "Can you repair accident damaged trucks?", a: "Yes. We rebuild front ends, repair cabs and bumpers, do panel beating and respray. See the before and after photos on our accident repairs page." },
-  { q: "What is truck bed rubberizing?", a: "It is a tough sprayed rubber coating for truck and bakkie beds. We repair and sand the bed first, then coat it for a non slip, scratch resistant finish." },
-  { q: "Can you repair trailers and tippers?", a: "Yes. We repair trailer axles, bearings, brakes, tipper bodies, flatbeds and hydraulics." },
-  { q: "Do you do spray painting?", a: "Yes. We respray cabs and bodies, repair accident damage and match fleet colours." },
-  { q: "Do you offer fleet maintenance?", a: "Yes. Tell us how many trucks you run and how far they travel and we will set up a service schedule." },
-  { q: "What if my truck has broken down on the road?", a: "Call us right away on the number at the top of the page, then send your job card with your location so we can plan the next step." },
-  { q: "Do you fit diesel tanks?", a: "Yes. We fit and repair aluminium and steel diesel tanks, and repair fuel system faults." },
+  { q: "What areas do you cover?", a: "We operate across Gauteng and its outskirts, including Johannesburg, Sandton, Randburg, Roodepoort, Pretoria, Centurion, Midrand, Kempton Park, Germiston, Boksburg, Benoni and Alberton." },
+  { q: "How do I get a quote?", a: "Complete the job card on our website. It opens in WhatsApp, ready to send. Add photos of the appliance or the fault and we will come back with a quote." },
+  { q: "Which brands do you repair?", a: "We repair brands including Defy, LG, Whirlpool, Hisense, Indesit, AEG, GE, KIC and Fridgemaster, and many others. Put the brand and model on the job card and we will confirm." },
+  { q: "Do you repair at my home?", a: "Yes. In most cases we repair at your home or business. If a part must go to the workshop, we tell you before we take it." },
+  { q: "Is it worth repairing an old appliance?", a: "Often yes. We diagnose first and give you an honest opinion, including when a repair does not make sense." },
+  { q: "Why is my fridge not cooling?", a: "Common causes are a gas leak, a faulty compressor, a failed fan or a thermostat fault. We test each one before quoting." },
+  { q: "Do you install air conditioners?", a: "Yes. We install wall mounted split units, including the outdoor stand, piping and electrical connections, and we service and repair them too." },
+  { q: "Can you repair TVs and microwaves?", a: "Yes. We repair flat screen TVs, microwaves and other home electronics, including boards, power supplies, magnetrons and transformers." },
+  { q: "Do you repair gate motors?", a: "Yes. We repair sliding and swing gates and gate motors, and we can set up solar powered gate motors." },
 ]
 
 export default function FaqPage() {
   return (
     <>
-      <PageHero crumbs={[{ name: "FAQ", href: "/faq" }]} title="Truck repair questions, answered" image={{ src: "/truck-agents-mechanics-servicing-trucks-yard.jpg", alt: "Mechanics servicing trucks in the yard" }} text="Quick answers for owner drivers and fleet managers.">
+      <PageHero crumbs={[{ name: "FAQ", href: "/faq" }]} title="Appliance repair questions, answered" image={{ src: "/profix-appliances-front-load-washer-dryer-servicing.jpg", alt: "Front load washer dryer being serviced" }} text="Quick answers for homeowners and landlords.">
         <CallButton />
         <WhatsAppButton />
       </PageHero>
       <section className="mx-auto grid max-w-7xl gap-10 px-5 py-20 lg:grid-cols-[1.4fr_1fr]">
         <Faq items={items} />
         <div className="grid gap-5 self-start sm:grid-cols-2 lg:sticky lg:top-32 lg:grid-cols-1">
-          <MovingImage src="/truck-agents-ud-truck-cab-repair-restored-after.jpg" alt="UD truck cab restored after repair" className="aspect-[4/3] rounded-[2rem]" />
-          <MovingImage src="/truck-agents-truck-bed-rubberizing-after-coating.jpg" alt="Truck bed with a fresh rubberized coating" className="aspect-[4/3] rounded-[2rem]" variant={1} />
+          <MovingImage src="/profix-appliances-refrigerator-condenser-gas-servicing.jpg" alt="Fridge being serviced on site" className="aspect-[4/3] rounded-[2rem]" />
+          <MovingImage src="/profix-electronics-samsung-microwave-digital-panel.jpg" alt="Microwave with a digital control panel" className="aspect-[4/3] rounded-[2rem]" variant={1} />
         </div>
       </section>
       <BrandStrip />

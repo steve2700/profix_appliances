@@ -2,20 +2,22 @@ import Image from "next/image"
 import Link from "next/link"
 import { BRANDS } from "@/lib/brands"
 
-export function BrandStrip({ title = "Brands we work on" }: { title?: string }) {
+/** Endless scrolling row of brand logos. Pauses on hover. */
+export function BrandStrip({ title = "Brands we repair" }: { title?: string }) {
+  const row = (hidden: boolean) =>
+    BRANDS.map((b) => (
+      <Link key={`${hidden}-${b.slug}`} href={`/brands/${b.slug}`} tabIndex={hidden ? -1 : undefined} aria-hidden={hidden || undefined} aria-label={hidden ? undefined : `${b.name} repairs`} className="flex h-20 w-44 shrink-0 items-center justify-center rounded-2xl bg-white px-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+        <Image src={b.logo} alt={hidden ? "" : `${b.name} logo`} width={b.w} height={b.h} className="max-h-11 w-auto max-w-full object-contain" />
+      </Link>
+    ))
   return (
-    <section aria-label={title} className="bg-white py-10">
-      <div className="mx-auto max-w-7xl px-5">
-        <p className="text-center font-display text-2xl font-semibold text-graphite">{title}</p>
-        <ul className="mt-6 flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
-          {BRANDS.map((b) => (
-            <li key={b.slug}>
-              <Link href={`/brands/${b.slug}`} aria-label={`${b.name} truck repairs`} className="block transition duration-300 hover:scale-110">
-                <Image src={b.logo} alt={`${b.name} logo`} width={b.w} height={b.h} className="h-12 w-auto" />
-              </Link>
-            </li>
-          ))}
-        </ul>
+    <section aria-label={title} className="py-12">
+      <p className="mb-6 text-center font-display text-2xl font-semibold text-graphite">{title}</p>
+      <div className="overflow-hidden">
+        <div className="strip-fast flex w-max gap-4 pr-4">
+          {row(false)}
+          {row(true)}
+        </div>
       </div>
     </section>
   )
