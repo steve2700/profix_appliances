@@ -1,6 +1,8 @@
 import { MovingImage } from "@/components/moving-image"
 
 const photos: [string, string][] = [
+  ["/profix-generator-repairs-diesel-engine-bay-alternator-starter.jpg", "Diesel generator engine bay"],
+  ["/profix-cold-room-repairs-walk-in-evaporator-fans.jpg", "Walk in cold room evaporator unit"],
   ["/profix-appliances-built-in-electric-oven-hob.jpg", "Built in electric oven and hob"],
   ["/profix-appliances-washing-machine-motor-repair.jpg", "Washing machine motor being repaired"],
   ["/profix-gates-modern-wooden-slat-sliding-gate.jpg", "Modern wooden slat sliding gate"],
@@ -11,6 +13,8 @@ const photos: [string, string][] = [
   ["/profix-appliances-oven-control-board-repair.jpg", "Oven control board repair"],
   ["/profix-gates-technician-welding-palisade-gate.jpg", "Technician welding a palisade gate"],
   ["/profix-appliances-front-load-washer-dryer-servicing.jpg", "Front load washer servicing"],
+  ["/profix-generator-repairs-technicians-servicing-diesel-canopy-generator.jpg", "Technicians servicing a canopy diesel generator"],
+  ["/profix-appliances-glass-door-fridge-repair-on-site.jpg", "Glass door fridge repaired on site"],
 ]
 
 export function PhotoStrip() {

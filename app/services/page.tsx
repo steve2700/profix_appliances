@@ -7,15 +7,15 @@ import { CtaBand } from "@/components/cta-band"
 import { SERVICES } from "@/lib/services"
 
 export const metadata: Metadata = {
-  title: "Appliance, Electronics and Gate Repair Services in Gauteng",
-  description: "All Profix services: washing machine, dishwasher, fridge, oven, microwave, air conditioner, TV, circuit board and gate motor repairs across Gauteng.",
+  title: "Appliance, Generator, Cold Room and Gate Repair Services in Gauteng",
+  description: "All Profix services: washing machine, dishwasher, fridge, cold room, commercial fridge, oven, microwave, air conditioner, TV, circuit board, generator and gate motor repairs across Gauteng.",
   alternates: { canonical: "/services" },
 }
 
 export default function ServicesPage() {
   return (
     <>
-      <PageHero crumbs={[{ name: "Services", href: "/services" }]} title="Repair services across Gauteng" image={{ src: "/profix-appliances-top-load-washing-machine-field-repair.jpg", alt: "Technician repairing a washing machine at a customer's home" }} text="From washing machines to gate motors, pick a service or send a job card and we will sort it.">
+      <PageHero crumbs={[{ name: "Services", href: "/services" }]} title="Repair services across Gauteng" image={{ src: "/profix-appliances-top-load-washing-machine-field-repair.jpg", alt: "Technician repairing a washing machine at a customer's home" }} text="From washing machines and TVs to generators and cold rooms, pick a service or send a job card and we will sort it.">
         <CallButton />
         <LinkButton href="/contact#job-card" look="outlineLight">Get a Free Quote</LinkButton>
       </PageHero>

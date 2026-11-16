@@ -6,11 +6,16 @@ import { CallButton, LinkButton } from "@/components/buttons"
 
 export const metadata: Metadata = {
   title: "Appliance Repair Gallery",
-  description: "Photos of Profix technicians repairing washing machines, fridges, ovens, microwaves, air conditioners, TVs and gates across Gauteng.",
+  description: "Photos of Profix technicians repairing washing machines, fridges, cold rooms, generators, ovens, microwaves, air conditioners, TVs and gates across Gauteng.",
   alternates: { canonical: "/gallery" },
 }
 
 const photos: [string, string][] = [
+  ["/profix-generator-repairs-diesel-engine-bay-alternator-starter.jpg", "Diesel generator engine bay"],
+  ["/profix-generator-repairs-technicians-servicing-diesel-canopy-generator.jpg", "Technicians servicing a canopy diesel generator"],
+  ["/profix-generator-repairs-technician-servicing-portable-petrol-generator.jpg", "Technician servicing a portable petrol generator"],
+  ["/profix-cold-room-repairs-walk-in-evaporator-fans.jpg", "Walk in cold room with an evaporator unit"],
+  ["/profix-appliances-glass-door-fridge-repair-on-site.jpg", "Glass door fridge repaired on site"],
   ["/profix-appliances-top-load-washing-machine-field-repair.jpg", "Top loader washing machine repaired on site"],
   ["/profix-appliances-refrigerator-condenser-gas-servicing.jpg", "Fridge serviced on site with a gas cylinder"],
   ["/profix-electronics-microwave-transformer-magnetron-repair.jpg", "Microwave transformer and magnetron repair"],

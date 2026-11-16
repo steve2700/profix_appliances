@@ -5,7 +5,7 @@ import { BRANDS } from "@/lib/brands"
 
 const head = `# Profix Electronics & Appliances
 
-> Profix repairs and installs household appliances, electronics and gates across ${SITE.region}, South Africa. Services include washing machine and dishwasher repairs, fridge and freezer repairs, oven, stove and hob repairs, microwave repairs, air conditioner installation and repairs, TV and electronics repairs, circuit board repairs, and gate motor and gate repairs. Brands: ${BRANDS.map((b) => b.name).join(", ")}.
+> Profix repairs and installs household appliances, electronics and gates across ${SITE.region}, South Africa. Services include washing machine and dishwasher repairs, fridge and freezer repairs, cold room and commercial fridge repairs, oven, stove and hob repairs, microwave repairs, air conditioner installation and repairs, TV and electronics repairs, circuit board repairs, generator repairs, and gate motor and gate repairs. Brands: ${BRANDS.map((b) => b.name).join(", ")}.
 
 Website: ${SITE.url}
 Phone and WhatsApp: ${SITE.phoneDisplay}

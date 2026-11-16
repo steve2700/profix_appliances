@@ -6,7 +6,7 @@ export const SITE = {
   phoneDisplay: "073 225 1047",
   phoneTel: "+27732251047",
   whatsapp: "27732251047",
-  email: "contact@profixappliances.co.za",
+  email: "info@profixappliances.co.za",
   tagline: "Electronics & Appliances",
   // Used in headlines and schema. Confirm the real service area with the client.
   region: "Gauteng and its outskirts",

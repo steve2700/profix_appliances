@@ -8,7 +8,7 @@ import { CallButton, WhatsAppButton } from "@/components/buttons"
 
 export const metadata: Metadata = {
   title: "Appliance Repair FAQ",
-  description: "Answers to common questions about appliance repairs, quotes, brands, air conditioner installation and areas covered by Profix in Gauteng.",
+  description: "Answers to common questions about appliance, generator, cold room and gate repairs, quotes, brands, air conditioner installation and areas covered by Profix in Gauteng.",
   alternates: { canonical: "/faq" },
 }
 
@@ -21,13 +21,16 @@ const items = [
   { q: "Why is my fridge not cooling?", a: "Common causes are a gas leak, a faulty compressor, a failed fan or a thermostat fault. We test each one before quoting." },
   { q: "Do you install air conditioners?", a: "Yes. We install wall mounted split units, including the outdoor stand, piping and electrical connections, and we service and repair them too." },
   { q: "Can you repair TVs and microwaves?", a: "Yes. We repair flat screen TVs, microwaves and other home electronics, including boards, power supplies, magnetrons and transformers." },
+  { q: "Do you repair generators?", a: "Yes. We repair diesel and petrol generators, from portable petrol units to canopy diesel sets, including starting faults, fuel problems, overheating and output faults. Send a photo of the nameplate on WhatsApp and we will confirm your model." },
+  { q: "Do you repair cold rooms and commercial fridges?", a: "Yes. We repair walk in cold rooms, freezer rooms, glass door display fridges, upright and under counter fridges and chest freezers. If your cold room is warming up, call us straight away and keep the door closed." },
+  { q: "How much does a repair cost?", a: "It depends on the fault, so we do not guess. You get a clear quote after the diagnosis and before any repair work starts." },
   { q: "Do you repair gate motors?", a: "Yes. We repair sliding and swing gates and gate motors, and we can set up solar powered gate motors." },
 ]
 
 export default function FaqPage() {
   return (
     <>
-      <PageHero crumbs={[{ name: "FAQ", href: "/faq" }]} title="Appliance repair questions, answered" image={{ src: "/profix-appliances-front-load-washer-dryer-servicing.jpg", alt: "Front load washer dryer being serviced" }} text="Quick answers for homeowners and landlords.">
+      <PageHero crumbs={[{ name: "FAQ", href: "/faq" }]} title="Repair questions, answered" image={{ src: "/profix-appliances-front-load-washer-dryer-servicing.jpg", alt: "Front load washer dryer being serviced" }} text="Quick answers for homeowners, landlords and business owners.">
         <CallButton />
         <WhatsAppButton />
       </PageHero>

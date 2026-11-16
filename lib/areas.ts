@@ -54,10 +54,12 @@ export const APPLIANCES = [
   "Washing machine",
   "Dishwasher",
   "Fridge or freezer",
+  "Cold room or commercial fridge",
   "Oven, stove or hob",
   "Microwave",
   "Air conditioner",
   "TV or electronics",
+  "Generator",
   "Gate or gate motor",
   "Something else",
 ] as const

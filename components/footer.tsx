@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Logo } from "@/components/logo"
+import { CallButton, WhatsAppButton } from "@/components/buttons"
 import { PhoneIcon, WhatsAppIcon } from "@/components/icons"
 import { SERVICES } from "@/lib/services"
 import { AREAS } from "@/lib/areas"
@@ -11,10 +12,22 @@ export function Footer() {
   const a = "block py-1 text-silver transition hover:text-signal"
   return (
     <footer className="bg-ink pb-24 pt-16 text-silver md:pb-10">
+      <div className="mx-auto mb-14 max-w-7xl px-5">
+        <div className="flex flex-col gap-5 rounded-[2rem] bg-signal p-7 text-ink md:flex-row md:items-center md:justify-between">
+          <div>
+            <p className="font-display text-3xl font-bold leading-tight md:text-4xl">Broken right now? Call us.</p>
+            <p className="mt-1 text-lg font-medium">Appliance down, generator dead or cold room warming up? Tell us what is happening and where you are.</p>
+          </div>
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <CallButton look="dark" size="md" />
+            <WhatsAppButton size="md" />
+          </div>
+        </div>
+      </div>
       <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <Logo tone="dark" />
-          <p className="mt-5 max-w-xs leading-relaxed">Appliance, electronics and gate repairs across {SITE.region}.</p>
+          <p className="mt-5 max-w-xs leading-relaxed">Appliance, electronics, generator, cold room and gate repairs across {SITE.region}. Call or WhatsApp for a clear quote before any work starts.</p>
           <div className="mt-6 flex gap-3">
             <a href={`tel:${SITE.phoneTel}`} aria-label="Call Profix" className="flex h-12 w-12 items-center justify-center rounded-full bg-signal text-ink transition hover:bg-signal-dark"><PhoneIcon className="h-5 w-5" /></a>
             <a href={WA_LINK("Hi Profix, I need help with an appliance.")} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Profix" className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-ink transition hover:bg-[#1fbd5b]"><WhatsAppIcon className="h-6 w-6" /></a>

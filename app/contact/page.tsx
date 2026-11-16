@@ -8,7 +8,7 @@ import { SITE, WA_LINK } from "@/lib/site"
 
 export const metadata: Metadata = {
   title: "Contact Profix and Get a Free Quote",
-  description: "Call Profix, send a WhatsApp job card or email us for appliance, electronics and gate motor repairs across Gauteng and its outskirts.",
+  description: "Call Profix, send a WhatsApp job card or email us for appliance, electronics, generator, cold room and gate motor repairs across Gauteng and its outskirts.",
   alternates: { canonical: "/contact" },
 }
 
@@ -16,7 +16,7 @@ export default function ContactPage() {
   return (
     <>
       <JsonLd data={{ "@context": "https://schema.org", "@type": "ContactPage", url: `${SITE.url}/contact`, mainEntity: { "@id": `${SITE.url}/#business` } }} />
-      <PageHero crumbs={[{ name: "Contact", href: "/contact" }]} title="Call us, or send a job card" image={{ src: "/profix-appliances-washing-machine-multimeter-testing.jpg", alt: "Profix technician testing a washing machine with a multimeter" }} text="The fastest way to get a quote is the job card below. For something urgent, call now." />
+      <PageHero crumbs={[{ name: "Contact", href: "/contact" }]} title="Call us, or send a job card" image={{ src: "/profix-appliances-washing-machine-multimeter-testing.jpg", alt: "Profix technician testing a washing machine with a multimeter" }} text="The fastest way to get a quote is the job card below. For something urgent, like a dead generator or a warm cold room, call now." />
       <section className="mx-auto max-w-7xl px-5 py-16">
         <div className="grid gap-4 md:grid-cols-3">
           <a href={`tel:${SITE.phoneTel}`} className="flex items-center gap-4 rounded-[2rem] bg-signal p-6 text-ink transition hover:bg-signal-dark">

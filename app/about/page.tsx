@@ -8,7 +8,7 @@ import { CallButton, LinkButton } from "@/components/buttons"
 
 export const metadata: Metadata = {
   title: "About Profix Electronics & Appliances",
-  description: "Profix repairs appliances, electronics and gate motors across Gauteng. Learn how we work and what to expect when you book a repair.",
+  description: "Profix repairs appliances, electronics, generators, cold rooms and gate motors across Gauteng. Learn how we work and what to expect when you book a repair.",
   alternates: { canonical: "/about" },
 }
 
@@ -23,7 +23,7 @@ export default function AboutPage() {
   return (
     <>
       {/* TODO: replace the copy below with the owner's real story, years in business and team details. */}
-      <PageHero crumbs={[{ name: "About", href: "/about" }]} title="Repairs by technicians who know electronics" image={{ src: "/profix-appliances-washing-machine-repairman-on-site.jpg", alt: "Profix technician repairing a washing machine on site" }} text="Profix repairs appliances, electronics and gate motors across Gauteng and its outskirts.">
+      <PageHero crumbs={[{ name: "About", href: "/about" }]} title="Repairs by technicians who know electronics" image={{ src: "/profix-appliances-washing-machine-repairman-on-site.jpg", alt: "Profix technician repairing a washing machine on site" }} text="Profix repairs appliances, electronics, generators, cold rooms and gate motors across Gauteng and its outskirts.">
         <CallButton />
         <LinkButton href="/contact#job-card" look="outlineLight">Get a Free Quote</LinkButton>
       </PageHero>
@@ -34,7 +34,7 @@ export default function AboutPage() {
             A broken fridge, oven or washing machine disrupts the whole household. Profix was built around fast, honest repairs. We test with real instruments, replace only what has failed and explain what we found in plain language.
           </p>
           <p className="mt-4 max-w-xl text-lg leading-relaxed text-graphite">
-            We also work on TVs, microwaves, air conditioners and gate motors, so one call covers most of what breaks around your home.
+            We also work on TVs, microwaves, air conditioners and gate motors, and we repair generators, cold rooms and commercial fridges for businesses that cannot afford downtime. One call covers most of what breaks around your home or business.
           </p>
         </div>
         <MovingImage src="/profix-appliances-top-load-washing-machine-field-repair.jpg" alt="Profix technician repairing a top loader washing machine" className="aspect-[4/5] max-h-[560px] w-full rounded-[2rem]" priority markWidth={52} />

@@ -1,6 +1,6 @@
 import { CallButton, WhatsAppButton, LinkButton } from "@/components/buttons"
 
-export function CtaBand({ title = "Appliance broken? Call us now.", text = "Tell us what is not working and where you are. We will tell you what happens next." }: { title?: string; text?: string }) {
+export function CtaBand({ title = "Something broken? Call us now.", text = "Tell us what is not working and where you are. We will tell you what happens next." }: { title?: string; text?: string }) {
   return (
     <section className="relative isolate overflow-hidden bg-ink py-20 text-white">
       <div aria-hidden="true" className="absolute -right-24 top-0 -z-10 h-full w-[38%] skew-x-[-14deg] bg-signal" />

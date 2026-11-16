@@ -37,7 +37,7 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-white text-ink shadow-md shadow-ink/5">
       <div className="hidden bg-ink text-sm font-medium text-white md:block">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-1.5">
-          <span>Serving {SITE.region}</span>
+          <span>Appliance, electronics, generator and cold room repairs. Serving {SITE.region}</span>
           <a href={`tel:${SITE.phoneTel}`} className="font-semibold text-signal hover:underline">{SITE.phoneDisplay}</a>
         </div>
       </div>
@@ -47,8 +47,8 @@ export function Header() {
           <Link href="/" className={item}>Home</Link>
           <div className="group relative">
             <Link href="/services" className={item}>Services<Caret /></Link>
-            <div className={`${panel} w-[26rem]`}>
-              {SERVICES.map((s) => <Link key={s.slug} href={`/services/${s.slug}`} className={sub}>{s.name}</Link>)}
+            <div className={`${panel} grid w-[40rem] grid-cols-2`}>
+              {SERVICES.map((s) => <Link key={s.slug} href={`/services/${s.slug}`} className={`${sub} flex items-center justify-between gap-3`}>{s.name}{s.urgent && <span className="shrink-0 rounded-full bg-signal px-2.5 py-0.5 font-sans text-xs font-bold text-ink">Urgent</span>}</Link>)}
             </div>
           </div>
           <div className="group relative">
@@ -77,7 +77,7 @@ export function Header() {
             <summary className="cursor-pointer font-display text-3xl font-semibold marker:hidden">Services<Caret /></summary>
             <div className="mt-3 flex flex-col">
               <Link href="/services" className="py-2 text-lg text-graphite">All services</Link>
-              {SERVICES.map((s) => <Link key={s.slug} href={`/services/${s.slug}`} className="py-2 text-lg text-graphite hover:text-azure">{s.name}</Link>)}
+              {SERVICES.map((s) => <Link key={s.slug} href={`/services/${s.slug}`} className="py-2 text-lg text-graphite hover:text-azure">{s.name}{s.urgent && <span className="ml-2 rounded-full bg-signal px-2 py-0.5 text-xs font-bold text-ink">Urgent</span>}</Link>)}
             </div>
           </details>
           <details className="border-b border-ink/10 py-4">

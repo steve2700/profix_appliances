@@ -8,7 +8,7 @@ import { AREAS } from "@/lib/areas"
 
 export const metadata: Metadata = {
   title: "Appliance Repairs Across Gauteng, Areas We Cover",
-  description: "Profix repairs appliances, electronics and gate motors in Johannesburg, Sandton, Randburg, Roodepoort, Pretoria, Centurion, Midrand, Kempton Park, Germiston, Boksburg, Benoni and Alberton.",
+  description: "Profix repairs appliances, electronics, generators, cold rooms and gate motors in Johannesburg, Sandton, Randburg, Roodepoort, Pretoria, Centurion, Midrand, Kempton Park, Germiston, Boksburg, Benoni and Alberton.",
   alternates: { canonical: "/service-areas" },
 }
 

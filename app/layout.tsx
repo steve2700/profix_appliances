@@ -9,9 +9,7 @@ import "@fontsource/dm-sans/400.css"
 import "@fontsource/dm-sans/500.css"
 import "@fontsource/dm-sans/700.css"
 import "./globals.css"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { FloatingActions } from "@/components/floating-actions"
+import { SiteShell } from "@/components/site-shell"
 import { JsonLd } from "@/components/json-ld"
 import { GOOGLE_ADS_CONVERSION_ID } from "@/lib/analytics"
 import { SITE } from "@/lib/site"
@@ -24,12 +22,12 @@ export const viewport: Viewport = { themeColor: "#0b1b34" }
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "Profix Electronics & Appliances | Appliance, TV and Gate Repairs in Gauteng",
+    default: "Profix Electronics & Appliances | Appliance, Generator and Cold Room Repairs in Gauteng",
     template: "%s | Profix",
   },
   description:
-    "Profix repairs washing machines, fridges, ovens, microwaves, air conditioners, TVs and gate motors across Gauteng and its outskirts. Call Now or send a WhatsApp job card for a quote.",
-  keywords: ["appliance repairs Gauteng", "washing machine repairs", "fridge repairs", "oven repairs", "microwave repairs", "aircon installation", "TV repairs", "gate motor repairs", "Profix"],
+    "Profix repairs washing machines, fridges, ovens, microwaves, air conditioners, TVs, gate motors, generators, cold rooms and commercial fridges across Gauteng and its outskirts. Call Now or send a WhatsApp job card for a quote.",
+  keywords: ["appliance repairs Gauteng", "washing machine repairs", "fridge repairs", "oven repairs", "microwave repairs", "aircon installation", "TV repairs", "gate motor repairs", "generator repairs", "cold room repairs", "commercial fridge repairs", "Profix"],
   applicationName: "Profix",
   authors: [{ name: "Profix Electronics & Appliances", url: SITE.url }],
   alternates: { canonical: "/" },
@@ -50,7 +48,7 @@ export const metadata: Metadata = {
     url: SITE.url,
     siteName: "Profix Electronics & Appliances",
     title: "Profix Electronics & Appliances | Repairs in Gauteng",
-    description: "Washing machines, fridges, ovens, microwaves, air conditioners, TVs and gates repaired across Gauteng.",
+    description: "Washing machines, fridges, ovens, microwaves, air conditioners, TVs, gates, generators and cold rooms repaired across Gauteng.",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Profix Electronics and Appliances repairs in Gauteng" }],
   },
   twitter: { card: "summary_large_image", title: "Profix Electronics & Appliances | Repairs in Gauteng", description: "Appliance, electronics and gate repairs across Gauteng.", images: ["/og-image.png"] },
@@ -68,7 +66,7 @@ const businessSchema = {
   logo: `${SITE.url}/logo-square.png`,
   telephone: SITE.phoneTel,
   email: SITE.email,
-  description: "Appliance, electronics and gate repairs across Gauteng and its outskirts.",
+  description: "Appliance, electronics, generator, cold room and gate repairs across Gauteng and its outskirts.",
   priceRange: "$$",
   knowsAbout: SERVICES.map((s) => s.name),
   brand: BRANDS.map((b) => ({ "@type": "Brand", name: b.name, logo: `${SITE.url}${b.logo}` })),
@@ -91,10 +89,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <JsonLd data={{ "@context": "https://schema.org", "@type": "WebSite", "@id": `${SITE.url}/#website`, url: SITE.url, name: SITE.name, inLanguage: "en-ZA", publisher: { "@id": `${SITE.url}/#business` } }} />
       </head>
       <body>
-        <Header />
-        <main className="pb-[72px] md:pb-0">{children}</main>
-        <Footer />
-        <FloatingActions />
+        <SiteShell>{children}</SiteShell>
         <Analytics />
         <SpeedInsights />
       </body>

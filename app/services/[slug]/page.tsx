@@ -47,6 +47,13 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <LinkButton href="#job-card" look="outlineLight">Get a Free Quote</LinkButton>
       </PageHero>
 
+      <section aria-label="Why it matters" className="bg-signal text-ink">
+        <div className="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-8 md:flex-row md:items-center md:justify-between">
+          <p className="max-w-4xl font-display text-2xl font-semibold leading-snug md:text-3xl">{s.pain}</p>
+          <div className="flex shrink-0 flex-col gap-3 sm:flex-row"><CallButton look="dark" size="md" /></div>
+        </div>
+      </section>
+
       <section className="mx-auto grid max-w-7xl gap-12 px-5 py-20 lg:grid-cols-[1fr_0.9fr]">
         <div>
           <p className="rounded-3xl border-l-8 border-signal bg-white p-6 text-xl font-medium leading-relaxed">{s.answer}</p>
@@ -85,6 +92,41 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </section>
       )}
 
+      <section aria-labelledby="how" className="mx-auto max-w-7xl px-5 py-20">
+        <h2 id="how" className="text-3xl font-bold md:text-4xl">What happens when you call</h2>
+        <ol className="mt-8 grid gap-5 md:grid-cols-3">
+          {[
+            { t: "Tell us what is wrong", d: "Call or send a job card on WhatsApp with the brand, the fault and your area. Photos help." },
+            { t: "We diagnose and quote", d: "A technician finds the real fault and explains it in plain language. You get a clear quote before any work starts." },
+            { t: "We repair it", d: "You approve the price, then we fix it, usually at your home or business." },
+          ].map((x, i) => (
+            <li key={x.t} className="rounded-3xl bg-ink p-7 text-white">
+              <span className="font-display text-5xl font-bold text-signal">{i + 1}</span>
+              <p className="mt-3 font-display text-2xl font-semibold">{x.t}</p>
+              <p className="mt-2 text-lg leading-relaxed text-silver">{x.d}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section aria-label="Repair or replace" className="mx-auto grid max-w-7xl gap-6 px-5 pb-20 lg:grid-cols-2">
+        <div className="rounded-[2rem] bg-white p-7 md:p-9">
+          <h2 className="text-3xl font-bold">Is it worth repairing?</h2>
+          <p className="mt-4 text-lg leading-relaxed text-graphite">{s.worth}</p>
+        </div>
+        <div className="rounded-[2rem] border-2 border-signal bg-white p-7 md:p-9">
+          <h2 className="text-3xl font-bold">While you wait for us</h2>
+          <ul className="mt-4 space-y-3">
+            {s.wait.map((w) => (
+              <li key={w} className="flex items-start gap-3 text-lg leading-relaxed">
+                <span aria-hidden="true" className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-signal" />
+                {w}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       <section className="cut-both bg-ink px-5 pb-28 pt-24 text-white">
         <div className="mx-auto max-w-7xl">
           <h2 className="mb-10 max-w-3xl text-4xl font-bold leading-[1.05] md:text-5xl">Get a quote for {s.name.toLowerCase()}</h2>
@@ -97,7 +139,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <Faq items={s.faqs} />
       </section>
 
-      <BrandStrip />
+      {s.showBrands !== false && <BrandStrip />}
 
       <section className="bg-white py-16">
         <div className="mx-auto max-w-7xl px-5">
