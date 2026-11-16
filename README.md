@@ -41,3 +41,5 @@ Two conversion-only pages for ads, built from one template:
 ## Service pages
 Each service in `lib/services.ts` now has: `pain` (the opening line), `worth` (repair or replace advice), `wait` (what to do while waiting), plus signs, inclusions and FAQs. `urgent: true` features a service in the "Cannot wait" band on the home page and gives it an "Urgent" tag in the menu. `showBrands: false` hides the appliance brand strip (used for generators and cold rooms).
 The new services are `generator-repairs` and `cold-room-and-commercial-fridge-repairs`. They are in the menu, footer, sitemap, schema and job card automatically.
+
+Third ad page: `/lp/tv-repairs` (TV repairs, in-home TV repair, flat screen TV repair, Hisense TV repair).

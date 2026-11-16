@@ -23,7 +23,7 @@ export interface LpForm {
 
 export interface Lp {
   slug: string
-  kind: "generator" | "cold"
+  kind: "generator" | "cold" | "tv"
   serviceName: string
   metaTitle: string
   metaDescription: string
@@ -290,6 +290,119 @@ export const LANDING_PAGES: Lp[] = [
     closing: {
       title: "Save your stock. Call now.",
       text: "Do not stand there watching the thermometer climb. Tell us what is happening and where you are, and we will tell you what happens next.",
+    },
+  },
+  // ───────────────────────── TV REPAIRS ─────────────────────────
+  {
+    slug: "tv-repairs",
+    kind: "tv",
+    serviceName: "TV Repairs",
+    metaTitle: "TV Repair in Johannesburg and Gauteng | In-Home Service",
+    metaDescription:
+      "Flat screen TV not working? Profix repairs TVs across Johannesburg and Gauteng. Screen faults, no power, no picture. We come to you. Call now or WhatsApp a photo.",
+    keywords: [
+      "tv repair",
+      "tv repairs near me",
+      "in home tv repair",
+      "flat screen tv repair",
+      "tv screen repair",
+      "television repair near me",
+      "hisense tv repair near me",
+    ],
+    badge: "In-home TV repair service",
+    h1: "TV Repair in Johannesburg and Gauteng",
+    sub: "Flat screen TV not working? We come to you, find the fault and give you a clear quote before any repair starts. If a board needs the workshop, we tell you first.",
+    hero: {
+      src: "/profix-electronics-tv-screen-repair-team.jpg",
+      alt: "Technicians repairing a flat screen TV on the floor",
+      aspect: "aspect-[4/3]",
+    },
+    heroPoints: [
+      "Flat screen, smart and big screen TVs",
+      "We come to you to diagnose the fault",
+      "Clear quote before any repair starts",
+      "Call, or WhatsApp a photo of the screen",
+    ],
+    waMessage: "Hi Profix, my TV needs repairs.",
+    source: "Google Ads: TV repairs page",
+    story: {
+      kicker: "You know this feeling",
+      title: "Five minutes to kick-off. You press the power button. A red light blinks. Nothing else.",
+      beats: [
+        { time: "7:55 pm", text: "The family is on the couch. Snacks are out. The match, the series, the Sunday movie you have all been waiting for is about to start." },
+        { time: "7:56 pm", text: "You press power. The standby light blinks, clicks or does nothing at all. You unplug it, plug it back in and try again." },
+        { time: "7:58 pm", text: "Or the sound is playing and the screen is black. Or the picture is covered in lines. The TV you paid for is a dark, silent slab on the wall." },
+        { time: "Next day", text: "A shop tells you it is cheaper to buy a new one. You were not planning to spend that this month." },
+        { time: "For many homes", text: "It is the TV a parent watches all day for company. The one the kids sit in front of after school. It is not just a screen." },
+      ],
+      punch: "Before you write off a TV you paid for, find out what is really wrong with it.",
+    },
+    turn: {
+      title: "Your TV may not be finished.",
+      text: "Many TVs that go dark have a fault in the power supply, the backlight or the main board, and those are often repairable. A technician with the right instruments can find the fault and tell you honestly what a repair would cost compared with a new TV.",
+      extra: "A cracked screen is usually the exception, and we will tell you that straight too.",
+    },
+    signsTitle: "Does this sound like your TV?",
+    signs: [
+      { title: "It will not switch on", text: "Dead, or the standby light blinks, clicks or stays red." },
+      { title: "Sound but no picture", text: "You can hear it, but the screen is black or very dark." },
+      { title: "Lines or dark patches", text: "Vertical or horizontal lines, shadows or patches across the screen." },
+      { title: "It keeps restarting", text: "It switches itself off, loops on the logo or restarts again and again." },
+      { title: "HDMI or input not working", text: "No signal from your decoder, console or soundbar." },
+      { title: "Dim or flickering picture", text: "A very dim picture, flickering or colours that look wrong." },
+    ],
+    fixesTitle: "What we repair",
+    fixes: [
+      { title: "No power faults", text: "Standby light blinking, dead TVs and power supply board faults." },
+      { title: "Backlight faults", text: "Sound but no picture, dim or shadowy screens and backlight problems." },
+      { title: "Main board faults", text: "Boards, restart loops and software or hardware faults on the board." },
+      { title: "Screen faults", text: "Lines and patches caused by board and panel connection faults. We tell you honestly if the panel itself is damaged." },
+      { title: "HDMI and sound", text: "Input, HDMI and sound problems." },
+      { title: "Soundbars and home theatre", text: "Soundbars and home theatre systems, tested and repaired." },
+    ],
+    gallery: [
+      { src: "/profix-electronics-tv-screen-repair-team.jpg", alt: "Technicians repairing a flat screen TV", caption: "TV repair in progress" },
+      { src: "/profix-electronics-tv-motherboard-diagnostics.jpg", alt: "TV motherboard being diagnosed", caption: "Board diagnostics" },
+      { src: "/profix-electronics-flat-screen-tv-disassembly.jpg", alt: "Flat screen TV opened up for repair", caption: "Opened for repair" },
+    ],
+    steps: [
+      { title: "Call or WhatsApp", text: "Tell us the brand, the size and what the TV is doing. A photo of the screen and the model sticker helps." },
+      { title: "We find the fault", text: "A technician diagnoses it and explains the problem in plain language." },
+      { title: "Clear quote, then the repair", text: "You approve the price before any work starts. Then we get the picture back." },
+    ],
+    waitTitle: "Before we get there",
+    wait: [
+      "Unplug the TV for a few minutes, then try again. It can clear some faults.",
+      "Do not open the back. Power supplies can hold a dangerous charge.",
+      "Do not press on the screen. It can damage the panel.",
+      "Take a photo of the screen fault, the model sticker on the back and any blinking pattern on the standby light.",
+    ],
+    audience: {
+      title: "TVs we repair",
+      items: ["Flat screen LED and LCD TVs", "Smart TVs", "Big screen TVs", "Hisense", "LG", "Samsung", "Soundbars", "Home theatre systems"], // CONFIRM brands and sizes
+    },
+    form: {
+      title: "Get your TV fixed",
+      faultLabel: "What is it doing?",
+      faults: ["Will not switch on", "Sound but no picture", "Lines or dark patches", "Keeps restarting", "HDMI or input fault", "Cracked screen", "Something else"],
+      detailLabel: "TV brand, size and model",
+      detailPlaceholder: "e.g. Hisense 55 inch, or the model on the back",
+      statusLabel: "Right now",
+      statuses: ["Not working at all", "Working but faulty"],
+      faultPlaceholder: "Tell us more, for example when it started and what the standby light does",
+    },
+    faqs: [
+      { q: "Do you repair TVs at my home?", a: "We come to you to diagnose the fault. Some repairs can be finished at home. Board level work can need the workshop, and we tell you before we take anything." },
+      { q: "Do you repair Hisense TVs?", a: "Yes. We repair Hisense and other brands of flat screen TV. Put the brand, size and model on the job card, or send a photo of the sticker on the back, and we will confirm." },
+      { q: "Can you repair a cracked TV screen?", a: "A cracked panel is usually not economical to replace, and we tell you that honestly. Faults on the boards and power supply are usually repairable." },
+      { q: "My TV has sound but no picture. Can it be fixed?", a: "This is commonly a backlight or power supply fault, and both are usually repairable. We test to confirm before we quote." },
+      { q: "How much does a TV repair cost?", a: "It depends on the fault, so we do not guess. You get a clear quote after the diagnosis and before any repair work starts." },
+      { q: "Is it worth repairing my TV or should I buy a new one?", a: "We give you an honest opinion after the diagnosis, including when a repair does not make sense." },
+      { q: "Which areas do you cover?", a: "We cover Johannesburg, Sandton, Randburg, Roodepoort, Pretoria, Centurion, Midrand, Kempton Park, Germiston, Boksburg, Benoni, Alberton and surrounding Gauteng areas." },
+    ],
+    closing: {
+      title: "Get the picture back.",
+      text: "Call now or send a job card. Tell us what the TV is doing and where you are, and we will tell you what happens next.",
     },
   },
 ]
