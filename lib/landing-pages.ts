@@ -293,7 +293,10 @@ export const LANDING_PAGES: Lp[] = [
       { q: "Can you come out today?", a: "Call us now with your area and what is happening, and we will tell you honestly how soon we can get to you." },
       { q: "Do you repair on site?", a: "Yes. A cold room cannot be moved, so we diagnose and repair on site. For smaller fridges, if a part has to go to the workshop, we will tell you before we take it." },
       { q: "How much does a cold room repair cost?", a: "It depends on the fault, so we do not guess. You get a clear quote after the diagnosis and before any repair work starts." },
+      { q: "Why is my cold room not getting cold?", a: "Common causes are a failed compressor or condenser fan, an iced up evaporator, low refrigerant, a faulty controller or sensor, or a door that does not seal. We test each one to find the real fault before we quote." },
+      { q: "Why is my freezer room or walk in freezer not freezing?", a: "A defrost fault, a failed fan motor, a refrigerant leak or a compressor problem can all stop a freezer room reaching temperature. We find which one so the fault does not come straight back." },
       { q: "Is it worth repairing, or should I replace it?", a: "We give you an honest opinion after the diagnosis, including when a repair does not make sense." },
+      { q: "Do you service cold rooms too?", a: "Our focus is repairs. If you are not sure whether your cold room needs a repair or a service, WhatsApp us what it is doing and we will tell you." },
       { q: "Which areas do you cover?", a: "We cover Johannesburg, Sandton, Randburg, Roodepoort, Pretoria, Centurion, Midrand, Kempton Park, Germiston, Boksburg, Benoni, Alberton and surrounding Gauteng areas." },
     ],
     closing: {
