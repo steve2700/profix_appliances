@@ -24,6 +24,15 @@ export function LeadCard({ form, subject, source }: { form: LpForm; subject: str
 
   useEffect(() => setRef(`PF${Math.floor(100000 + Math.random() * 900000)}`), [])
 
+  useEffect(() => {
+    const pick = (e: Event) => {
+      const f = (e as CustomEvent<string>).detail
+      if (form.faults.includes(f)) setFault(f)
+    }
+    window.addEventListener("lp-fault", pick)
+    return () => window.removeEventListener("lp-fault", pick)
+  }, [form.faults])
+
   const ready = Boolean(fault && name.trim())
 
   const message = useMemo(() => {

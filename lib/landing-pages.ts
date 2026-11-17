@@ -30,6 +30,8 @@ export interface Lp {
   keywords: string[]
   badge: string
   h1: string
+  /** Optional headline for ads that target a town, e.g. "Generator Repairs in {area}". Use ?area=Pretoria on the ad URL. */
+  h1Area?: string
   sub: string
   hero: { src: string; alt: string; aspect: string }
   heroPoints: string[]
@@ -43,7 +45,7 @@ export interface Lp {
   }
   turn: { title: string; text: string; extra: string }
   signsTitle: string
-  signs: { title: string; text: string }[]
+  signs: { title: string; text: string; fault?: string }[]
   fixesTitle: string
   fixes: { title: string; text: string }[]
   gallery: { src: string; alt: string; caption: string }[]
@@ -55,6 +57,8 @@ export interface Lp {
   audience?: { title: string; items: string[] }
   form: LpForm
   faqs: { q: string; a: string }[]
+  /** Real customer reviews only. Leave out (or empty) until you have permission to show them. */
+  reviews?: { name: string; text: string; area?: string }[]
   closing: { title: string; text: string }
 }
 
@@ -77,6 +81,7 @@ export const LANDING_PAGES: Lp[] = [
     ],
     badge: "Diesel and petrol generators",
     h1: "Generator Repairs in Johannesburg and Gauteng",
+    h1Area: "Generator Repairs in {area}",
     sub: "The power is out and your generator should be running. If it will not start, keeps cutting out or gives you no power, call Profix before the night gets any longer.",
     hero: {
       src: "/profix-generator-repairs-portable-petrol-generators-johannesburg.jpg",
@@ -110,12 +115,12 @@ export const LANDING_PAGES: Lp[] = [
     },
     signsTitle: "Does this sound like your generator?",
     signs: [
-      { title: "It will not start", text: "It just clicks, cranks slowly or turns over and never catches." },
-      { title: "It starts, then cuts out", text: "It runs for a minute or two, or dies the moment you switch the load on." },
-      { title: "It runs but gives no power", text: "The engine sounds fine but the lights stay off, or the voltage is low and unstable." },
-      { title: "Smoke, fumes or a fuel smell", text: "Black or white smoke, or a strong smell of fuel while it runs." },
-      { title: "Overheating or leaking", text: "Temperature warnings, oil or coolant on the floor, steam from the engine." },
-      { title: "Rough running or surging", text: "It hunts up and down, shakes, backfires or sounds like it is struggling." },
+      { title: "It will not start", text: "It just clicks, cranks slowly or turns over and never catches.", fault: "Will not start" },
+      { title: "It starts, then cuts out", text: "It runs for a minute or two, or dies the moment you switch the load on.", fault: "Starts then cuts out" },
+      { title: "It runs but gives no power", text: "The engine sounds fine but the lights stay off, or the voltage is low and unstable.", fault: "No power output" },
+      { title: "Smoke, fumes or a fuel smell", text: "Black or white smoke, or a strong smell of fuel while it runs.", fault: "Smoke or strange noise" },
+      { title: "Overheating or leaking", text: "Temperature warnings, oil or coolant on the floor, steam from the engine.", fault: "Overheating or leaking" },
+      { title: "Rough running or surging", text: "It hunts up and down, shakes, backfires or sounds like it is struggling.", fault: "Something else" },
     ],
     fixesTitle: "What we repair",
     fixes: [
@@ -168,6 +173,9 @@ export const LANDING_PAGES: Lp[] = [
       { q: "Why will my generator not start after standing for months?", a: "Stale fuel and a flat battery are two of the most common reasons. Blocked filters and a gummed up fuel system can also be the cause. A technician can check all of these." },
       { q: "Can you repair it at my home or business?", a: "In most cases we diagnose and repair on site. If a part has to go to the workshop, we will tell you before we take it." },
       { q: "How much does a generator repair cost?", a: "It depends on the fault, so we do not guess. You get a clear quote after the diagnosis and before any repair work starts. Photos and details on WhatsApp help us give you an early idea." },
+      { q: "My generator starts but gives no power. What is wrong?", a: "When the engine runs but there is no output, the fault is often in the alternator or the AVR, or in the breaker or wiring after it. We test each to find the part at fault before we quote." },
+      { q: "My generator cuts out when I switch the load on. Why?", a: "Common causes are a blocked fuel filter, air in the fuel system, a worn injector or an overloaded or faulty alternator. We find which one it is." },
+      { q: "Do you service generators too?", a: "Our focus is repairs. If you are not sure whether your generator needs a repair or a service, WhatsApp us what it is doing and we will tell you." },
       { q: "Is it worth repairing my generator or should I buy a new one?", a: "We give you an honest opinion after the diagnosis, including when a repair does not make sense." },
       { q: "Which areas do you cover?", a: "We cover Johannesburg, Sandton, Randburg, Roodepoort, Pretoria, Centurion, Midrand, Kempton Park, Germiston, Boksburg, Benoni, Alberton and surrounding Gauteng areas." },
     ],
@@ -195,6 +203,7 @@ export const LANDING_PAGES: Lp[] = [
     ],
     badge: "Cold rooms, freezer rooms and commercial fridges",
     h1: "Cold Room and Commercial Fridge Repairs in Gauteng",
+    h1Area: "Cold Room and Fridge Repairs in {area}",
     sub: "Every hour your cold room runs warm, your stock, your money and your reputation are at risk. Call now and let us get the cold back.",
     hero: {
       src: "/profix-cold-room-repairs-evaporator-unit-butchery-cold-room.jpg",
@@ -228,14 +237,14 @@ export const LANDING_PAGES: Lp[] = [
     },
     signsTitle: "Warning signs your cold room or fridge is failing",
     signs: [
-      { title: "It cannot hold temperature", text: "The temperature creeps up through the day or never reaches where it should." },
-      { title: "Ice on the evaporator or ceiling", text: "Heavy frost or ice build-up around the coil and fans, or ice that will not defrost." },
-      { title: "Compressor will not start or keeps stopping", text: "Loud, hot, short cycling, or completely silent." },
-      { title: "Water on the floor", text: "Pooling water or dripping from the evaporator, a blocked drain or a leaking unit." },
-      { title: "Fans not turning", text: "The fans on the evaporator or condenser have stopped, or sound rough." },
-      { title: "Door seals and doors", text: "Torn seals, a door that will not close properly, or frost forming around the frame." },
-      { title: "Display fridge sweating or warm", text: "Glass door fridges and freezers not cooling, or frosting up inside." },
-      { title: "Alarm or controller error", text: "A temperature alarm, blank display or an error code on the controller." },
+      { title: "It cannot hold temperature", text: "The temperature creeps up through the day or never reaches where it should.", fault: "Not cooling or too warm" },
+      { title: "Ice on the evaporator or ceiling", text: "Heavy frost or ice build-up around the coil and fans, or ice that will not defrost.", fault: "Ice build-up" },
+      { title: "Compressor will not start or keeps stopping", text: "Loud, hot, short cycling, or completely silent.", fault: "Compressor not starting" },
+      { title: "Water on the floor", text: "Pooling water or dripping from the evaporator, a blocked drain or a leaking unit.", fault: "Leaking water or gas" },
+      { title: "Fans not turning", text: "The fans on the evaporator or condenser have stopped, or sound rough.", fault: "Fans not working or noisy" },
+      { title: "Door seals and doors", text: "Torn seals, a door that will not close properly, or frost forming around the frame.", fault: "Something else" },
+      { title: "Display fridge sweating or warm", text: "Glass door fridges and freezers not cooling, or frosting up inside.", fault: "Not cooling or too warm" },
+      { title: "Alarm or controller error", text: "A temperature alarm, blank display or an error code on the controller.", fault: "Something else" },
     ],
     fixesTitle: "What we repair",
     fixes: [
@@ -311,6 +320,7 @@ export const LANDING_PAGES: Lp[] = [
     ],
     badge: "In-home TV repair service",
     h1: "TV Repair in Johannesburg and Gauteng",
+    h1Area: "TV Repair in {area}",
     sub: "Flat screen TV not working? We come to you, find the fault and give you a clear quote before any repair starts. If a board needs the workshop, we tell you first.",
     hero: {
       src: "/profix-electronics-tv-screen-repair-team.jpg",
@@ -344,12 +354,12 @@ export const LANDING_PAGES: Lp[] = [
     },
     signsTitle: "Does this sound like your TV?",
     signs: [
-      { title: "It will not switch on", text: "Dead, or the standby light blinks, clicks or stays red." },
-      { title: "Sound but no picture", text: "You can hear it, but the screen is black or very dark." },
-      { title: "Lines or dark patches", text: "Vertical or horizontal lines, shadows or patches across the screen." },
-      { title: "It keeps restarting", text: "It switches itself off, loops on the logo or restarts again and again." },
-      { title: "HDMI or input not working", text: "No signal from your decoder, console or soundbar." },
-      { title: "Dim or flickering picture", text: "A very dim picture, flickering or colours that look wrong." },
+      { title: "It will not switch on", text: "Dead, or the standby light blinks, clicks or stays red.", fault: "Will not switch on" },
+      { title: "Sound but no picture", text: "You can hear it, but the screen is black or very dark.", fault: "Sound but no picture" },
+      { title: "Lines or dark patches", text: "Vertical or horizontal lines, shadows or patches across the screen.", fault: "Lines or dark patches" },
+      { title: "It keeps restarting", text: "It switches itself off, loops on the logo or restarts again and again.", fault: "Keeps restarting" },
+      { title: "HDMI or input not working", text: "No signal from your decoder, console or soundbar.", fault: "HDMI or input fault" },
+      { title: "Dim or flickering picture", text: "A very dim picture, flickering or colours that look wrong.", fault: "Something else" },
     ],
     fixesTitle: "What we repair",
     fixes: [

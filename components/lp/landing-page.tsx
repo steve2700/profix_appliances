@@ -5,6 +5,7 @@ import { Faq } from "@/components/faq"
 import { JsonLd } from "@/components/json-ld"
 import { LeadCard } from "@/components/lp/lead-card"
 import { LpActions, LpFooter, LpHeader } from "@/components/lp/lp-chrome"
+import { FixThisButton, LpH1, LpScroll } from "@/components/lp/lp-client"
 import { AREAS } from "@/lib/areas"
 import { SITE } from "@/lib/site"
 import type { Lp } from "@/lib/landing-pages"
@@ -23,6 +24,7 @@ export function LandingPage({ lp }: { lp: Lp }) {
     <>
       <JsonLd data={{ "@context": "https://schema.org", "@type": "Service", name: lp.serviceName, description: lp.metaDescription, url: `${SITE.url}/lp/${lp.slug}`, serviceType: lp.serviceName, provider: { "@id": `${SITE.url}/#business` }, areaServed: { "@type": "AdministrativeArea", name: "Gauteng" } }} />
       <LpHeader />
+      <LpScroll />
 
       {/* 1. Hero: the keyword, the pain, one clear action */}
       <section className="relative isolate overflow-hidden bg-ink text-white">
@@ -30,7 +32,7 @@ export function LandingPage({ lp }: { lp: Lp }) {
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-12 md:py-16 lg:grid-cols-[1.15fr_0.85fr]">
           <div>
             <p className="inline-flex rounded-full bg-signal/15 px-4 py-1.5 font-display text-base font-semibold text-signal ring-1 ring-signal/40">{lp.badge}</p>
-            <h1 className="rise mt-5 max-w-4xl text-5xl font-bold leading-[0.95] md:text-7xl">{lp.h1}</h1>
+            <LpH1 base={lp.h1} template={lp.h1Area} className="rise mt-5 max-w-4xl text-5xl font-bold leading-[0.95] md:text-7xl" />
             <p className="mt-5 max-w-2xl text-xl leading-relaxed text-silver">{lp.sub}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <CallButton pulse label={callLabel} />
@@ -88,6 +90,7 @@ export function LandingPage({ lp }: { lp: Lp }) {
             <li key={s.title} className="rounded-3xl border-l-8 border-signal bg-white p-6">
               <p className="font-display text-2xl font-semibold leading-tight">{s.title}</p>
               <p className="mt-2 text-lg leading-relaxed text-graphite">{s.text}</p>
+              {s.fault && <FixThisButton fault={s.fault} />}
             </li>
           ))}
         </ul>
@@ -179,6 +182,20 @@ export function LandingPage({ lp }: { lp: Lp }) {
               {lp.audience.items.map((b) => <li key={b} className="rounded-full bg-steel px-6 py-3 font-display text-xl font-medium">{b}</li>)}
             </ul>
           </div>
+        </section>
+      )}
+
+      {lp.reviews && lp.reviews.length > 0 && (
+        <section aria-labelledby="reviews" className="mx-auto max-w-7xl px-5 py-20">
+          <h2 id="reviews" className="text-4xl font-bold md:text-5xl">What customers say</h2>
+          <ul className="mt-10 grid gap-5 md:grid-cols-3">
+            {lp.reviews.map((r) => (
+              <li key={r.name + r.text.slice(0, 12)} className="rounded-3xl bg-white p-7">
+                <p className="text-lg leading-relaxed">{r.text}</p>
+                <p className="mt-4 font-display text-lg font-semibold">{r.name}{r.area ? `, ${r.area}` : ""}</p>
+              </li>
+            ))}
+          </ul>
         </section>
       )}
 
