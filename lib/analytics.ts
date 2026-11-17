@@ -4,12 +4,24 @@
 // Until GOOGLE_ADS_CONVERSION_ID is set, these functions do nothing — safe to
 // leave blank while you're not running ads yet.
 
-export const GOOGLE_ADS_CONVERSION_ID = "" // e.g. "AW-123456789"
+// Google tag installed on every page (from Google Ads > Install the Google tag).
+// It is added in app/layout.tsx. Only one Google tag should load per page.
+export const GOOGLE_TAG_ID = "GTM-PSNHX3Z6"
+
+export const GOOGLE_ADS_CONVERSION_ID = "AW-18574546229"
 
 export const CONVERSION_LABELS = {
-  call: "", // label for phone call clicks
+  call: "Dxf9COfN8LkdELWqhJlF", // Click to call conversion
   whatsapp: "", // label for WhatsApp clicks
   email: "", // label for email clicks
+}
+
+/** Always tells the Google tag container about the click, so you can build triggers on these events. */
+function pushEvent(name: string) {
+  if (typeof window === "undefined") return
+  const w = window as typeof window & { dataLayer?: unknown[] }
+  w.dataLayer = w.dataLayer || []
+  w.dataLayer.push({ event: name })
 }
 
 function fireConversion(label: string) {
@@ -19,15 +31,20 @@ function fireConversion(label: string) {
   if (typeof w.gtag !== "function") return
   w.gtag("event", "conversion", {
     send_to: `${GOOGLE_ADS_CONVERSION_ID}/${label}`,
+    value: 1.0,
+    currency: "ZAR",
   })
 }
 
 export function trackCallClick() {
+  pushEvent("call_click")
   fireConversion(CONVERSION_LABELS.call)
 }
 export function trackWhatsAppClick() {
+  pushEvent("whatsapp_click")
   fireConversion(CONVERSION_LABELS.whatsapp)
 }
 export function trackEmailClick() {
+  pushEvent("email_click")
   fireConversion(CONVERSION_LABELS.email)
 }

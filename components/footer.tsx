@@ -1,3 +1,4 @@
+import { trackCallClick, trackEmailClick, trackWhatsAppClick } from "@/lib/analytics"
 import Link from "next/link"
 import { Logo } from "@/components/logo"
 import { CallButton, WhatsAppButton } from "@/components/buttons"
@@ -29,8 +30,8 @@ export function Footer() {
           <Logo tone="dark" />
           <p className="mt-5 max-w-xs leading-relaxed">Appliance, electronics, generator, cold room and gate repairs across {SITE.region}. Call or WhatsApp for a clear quote before any work starts.</p>
           <div className="mt-6 flex gap-3">
-            <a href={`tel:${SITE.phoneTel}`} aria-label="Call Profix" className="flex h-12 w-12 items-center justify-center rounded-full bg-signal text-ink transition hover:bg-signal-dark"><PhoneIcon className="h-5 w-5" /></a>
-            <a href={WA_LINK("Hi Profix, I need help with an appliance.")} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Profix" className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-ink transition hover:bg-[#1fbd5b]"><WhatsAppIcon className="h-6 w-6" /></a>
+            <a href={`tel:${SITE.phoneTel}`} onClick={trackCallClick} aria-label="Call Profix" className="flex h-12 w-12 items-center justify-center rounded-full bg-signal text-ink transition hover:bg-signal-dark"><PhoneIcon className="h-5 w-5" /></a>
+            <a href={WA_LINK("Hi Profix, I need help with an appliance.")} onClick={trackWhatsAppClick} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Profix" className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-ink transition hover:bg-[#1fbd5b]"><WhatsAppIcon className="h-6 w-6" /></a>
           </div>
         </div>
         <div>
@@ -46,8 +47,8 @@ export function Footer() {
         <div>
           <h3 className={h}>Contact</h3>
           <div className="mt-3">
-            <a href={`tel:${SITE.phoneTel}`} className={a}>{SITE.phoneDisplay}</a>
-            <a href={`mailto:${SITE.email}`} className={a}>{SITE.email}</a>
+            <a href={`tel:${SITE.phoneTel}`} onClick={trackCallClick} className={a}>{SITE.phoneDisplay}</a>
+            <a href={`mailto:${SITE.email}`} onClick={trackEmailClick} className={a}>{SITE.email}</a>
             <Link href="/contact#job-card" className={a}>Send a job card</Link>
             <Link href="/gallery" className={a}>Gallery</Link>
             <Link href="/about" className={a}>About</Link>

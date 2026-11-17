@@ -1,5 +1,6 @@
 "use client"
 
+import { trackCallClick } from "@/lib/analytics"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
@@ -38,7 +39,7 @@ export function Header() {
       <div className="hidden bg-ink text-sm font-medium text-white md:block">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-1.5">
           <span>Appliance, electronics, generator and cold room repairs. Serving {SITE.region}</span>
-          <a href={`tel:${SITE.phoneTel}`} className="font-semibold text-signal hover:underline">{SITE.phoneDisplay}</a>
+          <a href={`tel:${SITE.phoneTel}`} onClick={trackCallClick} className="font-semibold text-signal hover:underline">{SITE.phoneDisplay}</a>
         </div>
       </div>
       <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between gap-4 px-5">

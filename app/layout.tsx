@@ -11,7 +11,7 @@ import "@fontsource/dm-sans/700.css"
 import "./globals.css"
 import { SiteShell } from "@/components/site-shell"
 import { JsonLd } from "@/components/json-ld"
-import { GOOGLE_ADS_CONVERSION_ID } from "@/lib/analytics"
+import { GOOGLE_ADS_CONVERSION_ID, GOOGLE_TAG_ID } from "@/lib/analytics"
 import { SITE } from "@/lib/site"
 import { SERVICES } from "@/lib/services"
 import { AREAS } from "@/lib/areas"
@@ -79,7 +79,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en-ZA">
       <head>
         <meta name="format-detection" content="telephone=yes" />
-        {GOOGLE_ADS_CONVERSION_ID && (
+        {GOOGLE_TAG_ID && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtm.js?id=${GOOGLE_TAG_ID}`} />
+            <script dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());` }} />
+          </>
+        )}
+        {!GOOGLE_TAG_ID && GOOGLE_ADS_CONVERSION_ID && (
           <>
             <script async src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_CONVERSION_ID}`} />
             <script dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GOOGLE_ADS_CONVERSION_ID}');` }} />
