@@ -12,7 +12,7 @@ export const GOOGLE_ADS_CONVERSION_ID = "AW-18574546229"
 
 export const CONVERSION_LABELS = {
   call: "Dxf9COfN8LkdELWqhJlF", // Click to call conversion
-  whatsapp: "", // label for WhatsApp clicks
+  whatsapp: "IHmjCPis8bkdELWqhJlF", // WhatsApp click conversion
   email: "", // label for email clicks
 }
 
