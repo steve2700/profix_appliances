@@ -1,6 +1,8 @@
 import { MovingImage } from "@/components/moving-image"
 
 const photos: [string, string][] = [
+  ["/profix-tv-repairs-hisense-power-supply-closeup.jpg", "Hisense TV power supply board repair"],
+  ["/profix-tv-repairs-led-backlight-strips.jpg", "TV backlight strips under test"],
   ["/profix-generator-repairs-diesel-engine-bay-alternator-starter.jpg", "Diesel generator engine bay"],
   ["/profix-cold-room-repairs-walk-in-evaporator-fans.jpg", "Walk in cold room evaporator unit"],
   ["/profix-appliances-built-in-electric-oven-hob.jpg", "Built in electric oven and hob"],

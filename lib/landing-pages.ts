@@ -326,9 +326,9 @@ export const LANDING_PAGES: Lp[] = [
     h1Area: "TV Repair in {area}",
     sub: "Flat screen TV not working? We come to you, find the fault and give you a clear quote before any repair starts. If a board needs the workshop, we tell you first.",
     hero: {
-      src: "/profix-electronics-tv-screen-repair-team.jpg",
-      alt: "Technicians repairing a flat screen TV on the floor",
-      aspect: "aspect-[4/3]",
+      src: "/profix-tv-repairs-hisense-tv-power-supply-board.jpg",
+      alt: "Hisense TV power supply board being repaired",
+      aspect: "aspect-[4/5]",
     },
     heroPoints: [
       "Flat screen, smart and big screen TVs",
@@ -374,9 +374,12 @@ export const LANDING_PAGES: Lp[] = [
       { title: "Soundbars and home theatre", text: "Soundbars and home theatre systems, tested and repaired." },
     ],
     gallery: [
-      { src: "/profix-electronics-tv-screen-repair-team.jpg", alt: "Technicians repairing a flat screen TV", caption: "TV repair in progress" },
-      { src: "/profix-electronics-tv-motherboard-diagnostics.jpg", alt: "TV motherboard being diagnosed", caption: "Board diagnostics" },
-      { src: "/profix-electronics-flat-screen-tv-disassembly.jpg", alt: "Flat screen TV opened up for repair", caption: "Opened for repair" },
+      { src: "/profix-tv-repairs-hisense-power-supply-closeup.jpg", alt: "Close up of a Hisense TV power supply board", caption: "Hisense power supply" },
+      { src: "/profix-tv-repairs-main-board-hdmi-processor.jpg", alt: "TV main board with HDMI ports and processor", caption: "TV main board" },
+      { src: "/profix-tv-repairs-led-backlight-strips.jpg", alt: "TV LED backlight strips lit up during testing", caption: "Backlight testing" },
+      { src: "/profix-tv-repairs-main-board-inside-flat-screen-tv.jpg", alt: "Main board fitted inside a flat screen TV", caption: "Board inside the TV" },
+      { src: "/profix-tv-repairs-power-supply-board-diagnosis.jpg", alt: "TV power supply board opened for diagnosis", caption: "Power supply diagnosis" },
+      { src: "/profix-tv-repairs-main-board-power-section.jpg", alt: "Power section of a TV main board", caption: "Power section close up" },
     ],
     steps: [
       { title: "Call or WhatsApp", text: "Tell us the brand, the size and what the TV is doing. A photo of the screen and the model sticker helps." },

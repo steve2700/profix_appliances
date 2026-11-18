@@ -11,6 +11,11 @@ export const metadata: Metadata = {
 }
 
 const photos: [string, string][] = [
+  ["/profix-tv-repairs-hisense-power-supply-closeup.jpg", "Hisense TV power supply board repair"],
+  ["/profix-tv-repairs-main-board-hdmi-processor.jpg", "TV main board diagnostics"],
+  ["/profix-tv-repairs-led-backlight-strips.jpg", "TV backlight strips under test"],
+  ["/profix-tv-repairs-main-board-inside-flat-screen-tv.jpg", "Main board fitted inside a flat screen TV"],
+  ["/profix-tv-repairs-power-supply-board-diagnosis.jpg", "TV power supply board diagnosis"],
   ["/profix-generator-repairs-diesel-engine-bay-alternator-starter.jpg", "Diesel generator engine bay"],
   ["/profix-generator-repairs-technicians-servicing-diesel-canopy-generator.jpg", "Technicians servicing a canopy diesel generator"],
   ["/profix-generator-repairs-technician-servicing-portable-petrol-generator.jpg", "Technician servicing a portable petrol generator"],

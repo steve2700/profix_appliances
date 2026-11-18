@@ -328,8 +328,8 @@ export const SERVICES: Service[] = [
     metaDescription:
       "TV and electronics repairs in Gauteng. Flat screen TVs, motherboards, power supplies and backlights tested and repaired. Call Now or send a WhatsApp job card for a quote.",
     keywords: ["TV repairs Gauteng", "flat screen TV repair Johannesburg", "TV motherboard repair", "electronics repairs", "LED TV repair"],
-    image: "/profix-electronics-flat-screen-tv-disassembly.jpg",
-    imageAlt: "Flat screen TV opened up for repair",
+    image: "/profix-tv-repairs-hisense-power-supply-closeup.jpg",
+    imageAlt: "Close up of a Hisense TV power supply board being repaired",
     headline: "TV and electronics repairs you can trust",
     intro:
       "A TV that will not switch on or has lines on the screen does not always need replacing. Our electronics technicians test the board, power supply and backlight, and repair what is faulty.",
@@ -355,9 +355,9 @@ export const SERVICES: Service[] = [
     ],
     signs: ["TV will not switch on", "Lines or dark patches on screen", "Sound but no picture", "Keeps restarting", "HDMI or input not working", "Standby light blinking", "Dim picture or shadowy screen"],
     process: [
-      { src: "/profix-electronics-tv-screen-repair-team.jpg", alt: "Technicians repairing a flat screen TV on the floor", caption: "TV repair in progress" },
-      { src: "/profix-electronics-tv-motherboard-diagnostics.jpg", alt: "TV motherboard being diagnosed", caption: "Motherboard diagnostics" },
-      { src: "/profix-electronics-multimeter-circuit-testing.jpg", alt: "Multimeter testing a circuit board", caption: "Circuit testing" },
+      { src: "/profix-tv-repairs-main-board-hdmi-processor.jpg", alt: "TV main board with HDMI ports and processor", caption: "Main board diagnostics" },
+      { src: "/profix-tv-repairs-led-backlight-strips.jpg", alt: "TV LED backlight strips lit up during testing", caption: "Backlight testing" },
+      { src: "/profix-tv-repairs-power-supply-board-diagnosis.jpg", alt: "TV power supply board opened for diagnosis", caption: "Power supply repair" },
     ],
     faqs: [
       { q: "Can you repair a cracked TV screen?", a: "A cracked panel is usually not economical to replace. We tell you honestly. Faults on the boards and power supply are usually repairable." },
