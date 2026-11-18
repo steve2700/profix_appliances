@@ -23,7 +23,7 @@ export interface LpForm {
 
 export interface Lp {
   slug: string
-  kind: "generator" | "cold" | "tv"
+  kind: "generator" | "cold" | "tv" | "aircon" | "ice"
   serviceName: string
   metaTitle: string
   metaDescription: string
@@ -421,6 +421,477 @@ export const LANDING_PAGES: Lp[] = [
       text: "Call now or send a job card. Tell us what the TV is doing and where you are, and we will tell you what happens next.",
     },
   },
+
+  // ───────────────────────── AIRCON AND ICE MACHINES ─────────────────────────
+  {
+    "slug": "aircon-repairs",
+    "kind": "aircon",
+    "serviceName": "Aircon Repairs",
+    "metaTitle": "Aircon Repairs in Johannesburg and Gauteng",
+    "metaDescription": "Aircon not cooling or leaking water? Profix repairs air conditioners across Johannesburg and Gauteng. Clear quote first. Call now or WhatsApp a photo.",
+    "keywords": [
+      "aircon repairs",
+      "aircon repair near me",
+      "air conditioner repair",
+      "aircon not cooling",
+      "aircon leaking water",
+      "aircon regas"
+    ],
+    "badge": "Split and wall mounted air conditioners",
+    "h1": "Aircon Repairs in Johannesburg and Gauteng",
+    "h1Area": "Aircon Repairs in {area}",
+    "sub": "Aircon not cooling, leaking water or not switching on? Profix finds the fault on site and gives you a clear quote before any repair starts.",
+    "hero": {
+      "src": "/profix-appliances-air-conditioner-wall-unit-installation.jpg",
+      "alt": "Wall mounted air conditioner unit on a wall",
+      "aspect": "aspect-[4/5]"
+    },
+    "heroPoints": [
+      "Split and wall mounted air conditioners",
+      "We come to you to find the fault",
+      "Clear quote before any repair starts",
+      "Call, or WhatsApp a photo of the unit"
+    ],
+    "waMessage": "Hi Profix, my aircon needs repairs.",
+    "source": "Google Ads: Aircon repairs page",
+    "story": {
+      "kicker": "If you have lived through a Gauteng summer, you know this feeling",
+      "title": "It is the hottest night of the year. You press the remote. The aircon does nothing.",
+      "beats": [
+        {
+          "time": "10:30 pm",
+          "text": "The bedroom has been baking all day. You press the remote and the unit beeps, blinks or does not respond at all."
+        },
+        {
+          "time": "11:15 pm",
+          "text": "Or it is running, but the air coming out is warm. You stand in front of it, hoping. Nothing changes."
+        },
+        {
+          "time": "1:40 am",
+          "text": "The sheets are damp. A fan is only pushing hot air around. Nobody in the house is sleeping."
+        },
+        {
+          "time": "Next morning",
+          "text": "You are tired, short tempered and facing a full day. Or there is a drip on the wall, a puddle on the floor and a stain spreading under the unit."
+        },
+        {
+          "time": "At work",
+          "text": "The shop is stifling. Customers walk in, look around and leave. Staff are slow. The office is too hot to think."
+        }
+      ],
+      "punch": "A broken aircon does not just make you hot. It takes your sleep, your focus and your good mood."
+    },
+    "turn": {
+      "title": "Your aircon can probably be fixed.",
+      "text": "Many aircon faults are small: low gas, a blocked drain, a dirty coil, a failed capacitor, a fan motor or a faulty sensor. A technician who tests the unit properly can find the fault and fix it, often without replacing the whole aircon.",
+      "extra": "And if the unit is too far gone, we will tell you honestly before you spend anything."
+    },
+    "signsTitle": "Does this sound like your aircon?",
+    "signs": [
+      {
+        "title": "Not cooling or blowing warm air",
+        "text": "The unit runs but the room stays hot.",
+        "fault": "Not cooling"
+      },
+      {
+        "title": "Leaking water",
+        "text": "Water dripping from the indoor unit, down the wall or onto the floor.",
+        "fault": "Leaking water"
+      },
+      {
+        "title": "Will not switch on",
+        "text": "No lights, no response from the remote, or it switches itself off.",
+        "fault": "Will not switch on"
+      },
+      {
+        "title": "Frozen or iced up",
+        "text": "Ice on the pipes or coil, weak airflow, or water when it thaws.",
+        "fault": "Freezing up or ice"
+      },
+      {
+        "title": "Noisy or smelly",
+        "text": "Rattling, grinding or buzzing, or a musty or burning smell.",
+        "fault": "Noisy or smelly"
+      },
+      {
+        "title": "Outdoor unit not running",
+        "text": "The fan is not turning, the unit hums or it trips the breaker.",
+        "fault": "Something else"
+      }
+    ],
+    "fixesTitle": "What we repair",
+    "fixes": [
+      {
+        "title": "Not cooling or warm air",
+        "text": "Dirty or iced coils, failed capacitors, compressor and sensor faults."
+      },
+      {
+        "title": "Water leaks",
+        "text": "Blocked drain lines, drain pans, pipework and frozen coils."
+      },
+      {
+        "title": "Gas leaks and regassing",
+        "text": "Finding the leak, repairing it and regassing the unit."
+      },
+      {
+        "title": "Electrical faults",
+        "text": "Capacitors, relays, control boards, remote receivers and wiring faults."
+      },
+      {
+        "title": "Fan and airflow faults",
+        "text": "Indoor and outdoor fan motors, blowers and noisy or rattling parts."
+      },
+      {
+        "title": "Outdoor unit faults",
+        "text": "Units that hum, trip the breaker or will not start."
+      }
+    ],
+    "gallery": [
+      {
+        "src": "/profix-appliances-hvac-aircon-manifold-servicing.jpg",
+        "alt": "Air conditioner being checked with gauges connected",
+        "caption": "Gas and pressure checks"
+      },
+      {
+        "src": "/profix-appliances-wall-mounted-aircon-unit.jpg",
+        "alt": "Wall mounted air conditioner unit on a house wall",
+        "caption": "Wall mounted unit"
+      },
+      {
+        "src": "/profix-appliances-hvac-ac-installation-finished.jpg",
+        "alt": "Outdoor air conditioner unit on a stand",
+        "caption": "Outdoor unit"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Call or WhatsApp",
+        "text": "Tell us what the aircon is doing, the brand and where you are. Photos help."
+      },
+      {
+        "title": "We find the fault",
+        "text": "A technician diagnoses it on site and explains the problem in plain language."
+      },
+      {
+        "title": "Clear quote, then the repair",
+        "text": "You approve the price before any work starts. Then we fix it."
+      }
+    ],
+    "waitTitle": "While you wait for us",
+    "wait": [
+      "Switch the unit off at the remote and the wall if it is leaking, freezing up or making grinding noises.",
+      "Clean or rinse the filters if you can. Blocked filters cause many faults.",
+      "Do not keep resetting a breaker that keeps tripping.",
+      "Send a photo of the unit labels and the fault on WhatsApp."
+    ],
+    "audience": {
+      "title": "Aircons we repair",
+      "items": [
+        "Split air conditioners",
+        "Wall mounted units",
+        "Home aircons",
+        "Office aircons",
+        "Shop aircons",
+        "Indoor and outdoor units"
+      ]
+    },
+    "form": {
+      "title": "Get your aircon fixed",
+      "faultLabel": "What is it doing?",
+      "faults": [
+        "Not cooling",
+        "Leaking water",
+        "Will not switch on",
+        "Freezing up or ice",
+        "Noisy or smelly",
+        "Something else"
+      ],
+      "detailLabel": "Brand and unit type",
+      "detailPlaceholder": "e.g. Samsung 12000 BTU wall split",
+      "statusLabel": "Right now",
+      "statuses": [
+        "Not working at all",
+        "Working but faulty"
+      ],
+      "faultPlaceholder": "Tell us more, for example when it started and what the unit shows"
+    },
+    "faqs": [
+      {
+        "q": "Why is my aircon not cooling?",
+        "a": "Low or leaking gas, dirty filters or coils, a failed capacitor or compressor, a fan problem or a sensor or control fault can all stop a unit cooling. We test to find which one."
+      },
+      {
+        "q": "Why is my aircon leaking water inside?",
+        "a": "A blocked or badly sloped drain line is the usual cause. A frozen coil from low gas or dirty filters can also make it drip. We find the cause before we quote."
+      },
+      {
+        "q": "Can you regas my aircon?",
+        "a": "Yes. We check for leaks first, because a unit that has lost gas usually has a leak, and topping it up without finding it will not last."
+      },
+      {
+        "q": "Do you repair aircons at my home or business?",
+        "a": "Yes. We diagnose and repair on site. If a part has to go to the workshop, we tell you before we take it."
+      },
+      {
+        "q": "How much does an aircon repair cost?",
+        "a": "It depends on the fault, so we do not guess. You get a clear quote after the diagnosis and before any repair work starts."
+      },
+      {
+        "q": "Is it worth repairing my aircon or should I replace it?",
+        "a": "We give you an honest opinion after the diagnosis, including when a repair does not make sense."
+      },
+      {
+        "q": "Do you install aircons?",
+        "a": "This page is about repairs. If you need a new aircon installed, WhatsApp us what you need."
+      },
+      {
+        "q": "Which areas do you cover?",
+        "a": "We cover Johannesburg, Sandton, Randburg, Roodepoort, Pretoria, Centurion, Midrand, Kempton Park, Germiston, Boksburg, Benoni, Alberton and surrounding Gauteng areas."
+      }
+    ],
+    "closing": {
+      "title": "Get your cool back.",
+      "text": "Call now or send a job card. Tell us what the aircon is doing and where you are, and we will tell you what happens next."
+    }
+  },
+  {
+    "slug": "ice-machine-repairs",
+    "kind": "ice",
+    "serviceName": "Ice Machine and Ice Maker Repairs",
+    "metaTitle": "Ice Machine and Ice Maker Repairs in Gauteng",
+    "metaDescription": "Ice machine not making ice? Profix repairs commercial ice machines and ice makers across Johannesburg and Gauteng. Clear quote first. Call now or WhatsApp.",
+    "keywords": [
+      "ice machine repair",
+      "ice maker repair",
+      "commercial ice machine repair",
+      "ice machine not making ice",
+      "ice maker not working",
+      "restaurant ice machine repair"
+    ],
+    "badge": "Commercial ice machines and ice makers",
+    "h1": "Ice Machine and Ice Maker Repairs in Gauteng",
+    "h1Area": "Ice Machine Repairs in {area}",
+    "sub": "No ice means no cold drinks and unhappy customers. Profix finds the fault on site and gives you a clear quote before any repair starts.",
+    "hero": {
+      "src": "/profix-appliances-glass-door-fridge-repair-on-site.jpg",
+      "alt": "Technician repairing a commercial refrigeration unit on site",
+      "aspect": "aspect-square"
+    },
+    "heroPoints": [
+      "Commercial ice machines and under counter ice makers",
+      "We come to you to find the fault",
+      "Clear quote before any repair starts",
+      "Call, or WhatsApp a photo of the machine"
+    ],
+    "waMessage": "Hi Profix, my ice machine needs repairs.",
+    "source": "Google Ads: Ice machine repairs page",
+    "story": {
+      "kicker": "If you run a bar, a restaurant or a shop, you know this one",
+      "title": "Friday afternoon. The busiest night of the week is coming. The ice bin is empty and the machine has stopped.",
+      "beats": [
+        {
+          "time": "4:30 pm",
+          "text": "You expected the bin to be full by now. The machine is silent, or humming away without making a single cube."
+        },
+        {
+          "time": "6:00 pm",
+          "text": "Staff start running to the shop for bags of ice. Every trip costs money and time, and the bags melt as fast as you can use them."
+        },
+        {
+          "time": "8:15 pm",
+          "text": "Drinks go out warm, or not at all. Orders back up. Customers frown and some of them leave."
+        },
+        {
+          "time": "Closing time",
+          "text": "The night's takings are lower than they should be, and you still do not know if the machine will work tomorrow."
+        },
+        {
+          "time": "Or elsewhere",
+          "text": "A butchery or fish counter that needs ice to keep stock fresh. A function with a hundred guests. A lodge in peak season."
+        }
+      ],
+      "punch": "It is only ice. Until the day it is not there."
+    },
+    "turn": {
+      "title": "Your ice machine can probably be fixed.",
+      "text": "Many ice machine faults come down to a water supply or inlet valve problem, scale build-up, a dirty condenser, a failed sensor or a fan or compressor fault. A technician who tests the machine properly can find which one and tell you what a repair costs.",
+      "extra": "If the machine is too old to be worth repairing, we will tell you honestly before you spend anything."
+    },
+    "signsTitle": "Does this sound like your ice machine?",
+    "signs": [
+      {
+        "title": "Not making ice",
+        "text": "The machine runs but the bin stays empty, or it will not start a cycle.",
+        "fault": "Not making ice"
+      },
+      {
+        "title": "Making too little ice",
+        "text": "Small, thin or partly formed cubes, or very slow production.",
+        "fault": "Making too little ice"
+      },
+      {
+        "title": "Leaking water",
+        "text": "Water under the machine, around the bin or coming from the drain.",
+        "fault": "Leaking water"
+      },
+      {
+        "title": "Wet or melting ice",
+        "text": "Soft, wet or cloudy ice, or ice that sticks together.",
+        "fault": "Ice is wet or melting"
+      },
+      {
+        "title": "Noisy or tripping the power",
+        "text": "Loud grinding or rattling, or the breaker trips when it runs.",
+        "fault": "Noisy or tripping power"
+      },
+      {
+        "title": "Machine has stopped",
+        "text": "No lights, no response or a warning light on the front.",
+        "fault": "Something else"
+      }
+    ],
+    "fixesTitle": "What we repair",
+    "fixes": [
+      {
+        "title": "Not making ice",
+        "text": "Water inlet valves, water supply faults, blocked filters and scale build-up."
+      },
+      {
+        "title": "Low ice production",
+        "text": "Dirty condensers, fan faults, low refrigerant, sensors and thermostats."
+      },
+      {
+        "title": "Water leaks",
+        "text": "Water lines, drain faults, pumps and seals."
+      },
+      {
+        "title": "Compressor and cooling faults",
+        "text": "Compressors, evaporators, relays and refrigerant leaks."
+      },
+      {
+        "title": "Controls and sensors",
+        "text": "Bin sensors, thermostats, control boards and wiring faults."
+      },
+      {
+        "title": "Machines we repair",
+        "text": "Commercial cube and flake machines, under counter ice makers and fridge ice makers."
+      }
+    ],
+    "gallery": [
+      {
+        "src": "/profix-appliances-refrigerator-compressor-repair.jpg",
+        "alt": "Refrigeration compressor being repaired",
+        "caption": "Compressor repair"
+      },
+      {
+        "src": "/profix-appliances-refrigerator-condenser-gas-servicing.jpg",
+        "alt": "Condenser and gas servicing on a refrigeration unit",
+        "caption": "Condenser and gas servicing"
+      },
+      {
+        "src": "/profix-cold-room-repairs-evaporator-and-racking.jpg",
+        "alt": "Commercial refrigeration evaporator unit",
+        "caption": "Commercial refrigeration"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Call or WhatsApp",
+        "text": "Tell us what the ice machine is doing, the brand and where you are. Photos help."
+      },
+      {
+        "title": "We find the fault",
+        "text": "A technician diagnoses it on site and explains the problem in plain language."
+      },
+      {
+        "title": "Clear quote, then the repair",
+        "text": "You approve the price before any work starts. Then we fix it."
+      }
+    ],
+    "waitTitle": "While you wait for us",
+    "wait": [
+      "Switch the machine off if it is leaking or making grinding noises.",
+      "Close the water supply valve if water is leaking.",
+      "Do not chip ice build-up with a knife or screwdriver. You can damage the evaporator.",
+      "Send a photo of the machine nameplate and the fault on WhatsApp."
+    ],
+    "audience": {
+      "title": "Businesses we keep supplied with ice",
+      "items": [
+        "Bars and pubs",
+        "Restaurants and takeaways",
+        "Hotels and lodges",
+        "Cafes and coffee shops",
+        "Butcheries and fish counters",
+        "Liquor stores",
+        "Caterers and events",
+        "Supermarkets and spaza shops"
+      ]
+    },
+    "form": {
+      "title": "Get your ice machine fixed",
+      "faultLabel": "What is it doing?",
+      "faults": [
+        "Not making ice",
+        "Making too little ice",
+        "Leaking water",
+        "Noisy or tripping power",
+        "Ice is wet or melting",
+        "Something else"
+      ],
+      "detailLabel": "Machine brand and type",
+      "detailPlaceholder": "e.g. Hoshizaki cube machine, or under counter",
+      "statusLabel": "How urgent is it?",
+      "statuses": [
+        "Urgent, no ice",
+        "Faulty but still making ice"
+      ],
+      "faultPlaceholder": "Tell us more, for example when it started and what you see"
+    },
+    "faqs": [
+      {
+        "q": "Do you repair commercial ice machines?",
+        "a": "Yes. We repair commercial cube and flake ice machines and under counter ice makers. Send a photo of the nameplate on WhatsApp and we will confirm your model."
+      },
+      {
+        "q": "Why is my ice machine not making ice?",
+        "a": "Common causes are a water supply or inlet valve fault, scale build-up, a dirty condenser, a faulty sensor or a compressor or fan problem. We test each one to find the real fault."
+      },
+      {
+        "q": "Why is my ice machine leaking water?",
+        "a": "A blocked drain, a split water line, a faulty pump or a worn seal can all cause a leak. We find the source before we quote."
+      },
+      {
+        "q": "Can you repair the ice maker in my fridge?",
+        "a": "Yes. We repair fridge and freezer ice makers and water dispensers."
+      },
+      {
+        "q": "Do you clean or service ice machines?",
+        "a": "Our focus is repairs. If you are not sure whether your machine needs a repair or a service, WhatsApp us what it is doing and we will tell you."
+      },
+      {
+        "q": "Do you repair on site?",
+        "a": "Yes. In most cases we diagnose and repair on site. If a part has to go to the workshop, we tell you before we take it."
+      },
+      {
+        "q": "How much does an ice machine repair cost?",
+        "a": "It depends on the fault, so we do not guess. You get a clear quote after the diagnosis and before any repair work starts."
+      },
+      {
+        "q": "Is it worth repairing or should I replace it?",
+        "a": "We give you an honest opinion after the diagnosis, including when a repair does not make sense."
+      },
+      {
+        "q": "Which areas do you cover?",
+        "a": "We cover Johannesburg, Sandton, Randburg, Roodepoort, Pretoria, Centurion, Midrand, Kempton Park, Germiston, Boksburg, Benoni, Alberton and surrounding Gauteng areas."
+      }
+    ],
+    "closing": {
+      "title": "Get your ice back.",
+      "text": "Call now or send a job card. Tell us what the machine is doing and where you are, and we will tell you what happens next."
+    }
+  },
+
 ]
 
 export function getLp(slug: string) {

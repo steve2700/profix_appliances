@@ -55,6 +55,7 @@ export const APPLIANCES = [
   "Dishwasher",
   "Fridge or freezer",
   "Cold room or commercial fridge",
+  "Ice maker or ice machine",
   "Oven, stove or hob",
   "Microwave",
   "Air conditioner",

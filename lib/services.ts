@@ -179,6 +179,94 @@ export const SERVICES: Service[] = [
     ],
   },
   {
+    "slug": "ice-machine-repairs",
+    "name": "Ice Machine and Ice Maker Repairs",
+    "short": "Commercial ice machines and ice makers repaired on site. Get your ice back.",
+    "metaTitle": "Ice Machine and Ice Maker Repairs in Gauteng",
+    "metaDescription": "Ice machine and ice maker repairs in Gauteng. Water supply, sensor, condenser and compressor faults repaired on site. Call Now for a clear quote.",
+    "keywords": [
+      "ice machine repair",
+      "ice maker repair",
+      "commercial ice machine repair",
+      "ice machine not making ice",
+      "restaurant ice machine repair",
+      "ice maker not working"
+    ],
+    "image": "/profix-appliances-glass-door-fridge-repair-on-site.jpg",
+    "imageAlt": "Technician repairing a commercial refrigeration unit on site",
+    "headline": "Ice machine repairs that keep your drinks cold",
+    "intro": "When the ice machine stops, the bar, the kitchen and the counter feel it straight away. Profix repairs commercial ice machines and ice makers across Gauteng, on site, with a clear quote before work starts.",
+    "answer": "Profix repairs commercial cube and flake ice machines, under counter ice makers and fridge ice makers across Gauteng, including water supply faults, sensors, condensers, compressors and leaks.",
+    "appliance": "Ice maker or ice machine",
+    "urgent": true,
+    "showBrands": false,
+    "pain": "Friday afternoon. The busiest night of the week is coming. The ice bin is empty and the machine has stopped. Staff are running to the shop for bags of ice that melt as fast as you use them.",
+    "worth": "Water inlet valves, sensors, condensers, fans and leaks are usually worth repairing. If a machine is very old and the compressor or evaporator has failed, replacing it can make more sense. We tell you honestly after the diagnosis.",
+    "wait": [
+      "Switch the machine off if it is leaking or making grinding noises.",
+      "Close the water supply valve if water is leaking.",
+      "Do not chip ice build-up with a knife or screwdriver. You can damage the evaporator.",
+      "Send a photo of the machine nameplate and the fault on WhatsApp."
+    ],
+    "includes": [
+      "Water inlet valve and supply faults",
+      "Scale build-up and blocked filters",
+      "Sensor and thermostat faults",
+      "Dirty condensers and fan faults",
+      "Compressor and refrigerant faults",
+      "Water leaks, pumps and drains",
+      "Control board and wiring faults",
+      "Fridge ice makers and water dispensers"
+    ],
+    "signs": [
+      "Not making ice",
+      "Making too little ice",
+      "Leaking water",
+      "Wet or melting ice",
+      "Noisy or tripping the power",
+      "Machine has stopped"
+    ],
+    "process": [
+      {
+        "src": "/profix-appliances-refrigerator-compressor-repair.jpg",
+        "alt": "Refrigeration compressor being repaired",
+        "caption": "Compressor repair"
+      },
+      {
+        "src": "/profix-appliances-refrigerator-condenser-gas-servicing.jpg",
+        "alt": "Condenser and gas servicing on a refrigeration unit",
+        "caption": "Condenser and gas servicing"
+      },
+      {
+        "src": "/profix-appliances-ice-maker-dishwasher-assembly-repairs.jpg",
+        "alt": "Ice maker assembly opened for repair",
+        "caption": "Ice maker assembly"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Do you repair commercial ice machines?",
+        "a": "Yes. We repair commercial cube and flake ice machines and under counter ice makers. Send a photo of the nameplate on WhatsApp and we will confirm your model."
+      },
+      {
+        "q": "Why is my ice machine not making ice?",
+        "a": "Common causes are a water supply or inlet valve fault, scale build-up, a dirty condenser, a faulty sensor or a compressor or fan problem. We test each one to find the real fault."
+      },
+      {
+        "q": "Why is my ice machine leaking water?",
+        "a": "A blocked drain, a split water line, a faulty pump or a worn seal can all cause a leak. We find the source before we quote."
+      },
+      {
+        "q": "Can you repair the ice maker in my fridge?",
+        "a": "Yes. We repair fridge and freezer ice makers and water dispensers."
+      },
+      {
+        "q": "Do you repair on site?",
+        "a": "Yes. In most cases we diagnose and repair on site. If a part has to go to the workshop, we tell you before we take it."
+      }
+    ]
+  },
+  {
     slug: "oven-stove-and-hob-repairs",
     name: "Oven, Stove and Hob Repairs",
     short: "Electric and gas ovens, stoves and hobs repaired, serviced and installed.",
