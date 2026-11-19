@@ -641,6 +641,10 @@ export const LANDING_PAGES: Lp[] = [
         "a": "We give you an honest opinion after the diagnosis, including when a repair does not make sense."
       },
       {
+        "q": "Do you repair car aircons?",
+        "a": "No. We repair home, shop and office air conditioners, including split and wall mounted units. For a car, please use an automotive air conditioning specialist."
+      },
+      {
         "q": "Do you install aircons?",
         "a": "This page is about repairs. If you need a new aircon installed, WhatsApp us what you need."
       },
