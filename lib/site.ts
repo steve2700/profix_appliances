@@ -4,8 +4,8 @@ export const SITE = {
   shortName: "Profix",
   url: "https://www.profixappliances.co.za",
   phoneDisplay: "072 033 5950",
-  phoneTel: "+27 72 033 5950",
-  whatsapp: "27732251047",
+  phoneTel: "+27720335950",
+  whatsapp: "27720335950",
   email: "contact@profixappliances.co.za",
   tagline: "Electronics & Appliances",
   // Used in headlines and schema. Confirm the real service area with the client.
